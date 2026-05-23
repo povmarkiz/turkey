@@ -65,7 +65,7 @@
     .nav-links a:hover { color: var(--text); }
     .nav-btn {
       background: var(--text);
-      color: var(--bg);
+      color: #faf8f5 !important;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.1em;
@@ -73,7 +73,7 @@
       padding: 10px 22px;
       border-radius: 40px;
     }
-    .nav-btn:hover { background: #3a3330; }
+    .nav-btn:hover { background: #3a3330; color: #faf8f5 !important; }
 
     /* HERO */
     #hero {
@@ -90,14 +90,15 @@
       background-image: url('photos/hero-fethiye-sunset.jpeg');
       background-size: cover;
       background-position: center 45%;
+      filter: brightness(0.55);
     }
     .hero-grad {
       position: absolute; inset: 0;
       background: linear-gradient(
         to top,
-        rgba(250,248,245,0.85) 0%,
-        rgba(250,248,245,0.2) 45%,
-        transparent 70%
+        rgba(10,8,6,0.72) 0%,
+        rgba(10,8,6,0.15) 50%,
+        transparent 75%
       );
     }
     .hero-inner {
@@ -113,7 +114,7 @@
       font-weight: 500;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: rgba(255,255,255,0.65);
       margin-bottom: 18px;
     }
     .hero-title {
@@ -122,7 +123,7 @@
       font-weight: 300;
       line-height: 0.95;
       letter-spacing: -0.01em;
-      color: var(--text);
+      color: #ffffff;
       margin-bottom: 36px;
     }
 
@@ -253,9 +254,13 @@
       background: var(--border);
       border: 1px solid var(--border);
     }
-    .fmt-card {
-      background: var(--surface);
-      padding: 40px 36px;
+    .fmt-card { background: var(--surface); }
+    .fmt-card-body { padding: 32px 36px; }
+    .fmt-card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
     }
     .fmt-icon { font-size: 22px; margin-bottom: 14px; }
     .fmt-title {
@@ -507,6 +512,20 @@
       object-fit: cover;
       display: block;
     }
+
+    /* Inline day photo */
+    .day-inline-photo {
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 2px;
+      max-width: 520px;
+    }
+    .day-inline-photo img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
     .carousel-btn {
       position: absolute;
       top: 50%;
@@ -545,6 +564,88 @@
       transition: background 0.2s;
     }
     .carousel-dot.active { background: #fff; }
+
+    /* COLLAGE */
+    .collage-wrap { background: var(--bg3); padding: 4px; }
+    .collage-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 240px 240px;
+      gap: 4px;
+    }
+    .collage-item {
+      overflow: hidden;
+      cursor: zoom-in;
+      background: var(--bg3);
+    }
+    .collage-item:first-child {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+    }
+    .collage-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .collage-item:hover img { transform: scale(1.05); }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.94);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lb-img-wrap {
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lb-img-wrap img {
+      max-width: 90vw;
+      max-height: 88vh;
+      object-fit: contain;
+      display: block;
+      width: auto;
+    }
+    .lb-close {
+      position: absolute; top: 24px; right: 28px;
+      background: none; border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 22px; cursor: pointer;
+      line-height: 1; padding: 8px;
+    }
+    .lb-close:hover { color: #fff; }
+    .lb-prev, .lb-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #fff; font-size: 20px;
+      width: 48px; height: 48px;
+      border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.22); }
+    .lb-prev { left: 24px; }
+    .lb-next { right: 24px; }
+    .lb-counter {
+      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+      font-size: 12px; color: rgba(255,255,255,0.45);
+      letter-spacing: 0.12em;
+    }
+    @media (max-width: 680px) {
+      .collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 180px);
+      }
+      .collage-item:first-child { grid-column: 1 / 3; grid-row: 1 / 2; }
+    }
 
   </style>
 </head>
@@ -595,8 +696,30 @@
   </div>
 </section>
 
-<!-- FULL PHOTO -->
-<img class="full-img" src="photos/yacht-sailing-open-sea.jpeg" alt="Яхта в море" loading="lazy" />
+<!-- PHOTO COLLAGE -->
+<div class="collage-wrap">
+  <div class="collage-grid" id="collageGrid">
+    <div class="collage-item" onclick="openLightbox(0)"><img src="photos/gallery-turkey-1.jpg" alt="Турция" loading="lazy" /></div>
+    <div class="collage-item" onclick="openLightbox(1)"><img src="photos/gallery-turkey-2.jpg" alt="Турция" loading="lazy" /></div>
+    <div class="collage-item" onclick="openLightbox(2)"><img src="photos/gallery-turkey-3.jpg" alt="Турция" loading="lazy" /></div>
+    <div class="collage-item" onclick="openLightbox(3)"><img src="photos/gallery-turkey-4.jpg" alt="Турция" loading="lazy" /></div>
+    <div class="collage-item" onclick="openLightbox(4)"><img src="photos/gallery-turkey-5.jpg" alt="Турция" loading="lazy" /></div>
+    <div class="collage-item" onclick="openLightbox(5)"><img src="photos/gallery-turkey-6.jpg" alt="Турция" loading="lazy" /></div>
+    <div class="collage-item" onclick="openLightbox(6)"><img src="photos/gallery-turkey-7.jpg" alt="Турция" loading="lazy" /></div>
+    <div class="collage-item" onclick="openLightbox(7)"><img src="photos/gallery-turkey-8.jpg" alt="Турция" loading="lazy" /></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-prev" onclick="event.stopPropagation(); lbMove(-1)">&#8592;</button>
+  <button class="lb-next" onclick="event.stopPropagation(); lbMove(1)">&#8594;</button>
+  <div class="lb-img-wrap">
+    <img id="lbImg" src="" alt="" />
+  </div>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
 
 <!-- ROUTE -->
 <section id="route">
@@ -630,41 +753,31 @@
         <p class="day-p">Стоянка на якоре возле необитаемого острова Гемилер. Подъём к самой верхушке острова, маяк и <strong>невероятный закат</strong>, который с каждым разом всё красивее. Ужинаем на яхте. Ночёвка на якоре.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<div class="day-photo">
-  <img src="photos/oludeniz-blue-lagoon-wide.jpg" alt="Олюдениз" loading="lazy" />
-</div>
-
-<section>
-  <div class="wrap">
-    <div class="day">
+    <div class="day day--photo">
       <div class="day-n">04</div>
       <div>
         <div class="day-date">23 июня</div>
         <h3 class="day-h">Олюдениз — полёт на парапланах</h3>
         <p class="day-p">Полёт на парапланах по желанию. В обед переход до <strong>пляжа Патара</strong> — 12 км золотого песка и кристально чистая вода с видом на величественные скалы. Ощущение, что ты на краю света. Ночуем в бухте на якоре.</p>
+        <div class="day-inline-photo">
+          <img src="photos/oludeniz-blue-lagoon-wide.jpg" alt="Олюдениз" loading="lazy" />
+        </div>
       </div>
     </div>
 
-    <div class="day">
+    <div class="day day--photo">
       <div class="day-n">05</div>
       <div>
         <div class="day-date">24 июня</div>
         <h3 class="day-h">Каш — вечерний город</h3>
         <p class="day-p">С пляжа отправляемся в Каш, встаём в марину и гуляем по вечернему городу — атмосферу которого нереально передать словами. Необычные бары и ужин в ресторане.</p>
+        <div class="day-inline-photo">
+          <img src="photos/kas-coast-turquoise.jpg" alt="Каш" loading="lazy" />
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<div class="day-photo">
-  <img src="photos/kas-coast-turquoise.jpg" alt="Каш" loading="lazy" />
-</div>
-
-<section>
-  <div class="wrap">
     <div class="day">
       <div class="day-n">06</div>
       <div>
@@ -695,45 +808,54 @@
 </section>
 
 <!-- YACHT CAROUSEL -->
-<div class="carousel-wrap">
-  <div class="carousel" id="yachtCarousel">
-    <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-slide"><img src="photos/yacht-deck-sunset.jpg" alt="Яхта на закате" loading="lazy" /></div>
-      <div class="carousel-slide"><img src="photos/yacht-sailing-open-sea.jpg" alt="Яхта в море" loading="lazy" /></div>
-      <div class="carousel-slide"><img src="photos/yacht-cabin-interior.jpg" alt="Каюта на яхте" loading="lazy" /></div>
-      <div class="carousel-slide"><img src="photos/yacht-cockpit-view.jpg" alt="Кокпит яхты" loading="lazy" /></div>
-    </div>
-  </div>
-  <button class="carousel-btn carousel-prev" onclick="carouselMove(-1)" aria-label="Назад">&#8592;</button>
-  <button class="carousel-btn carousel-next" onclick="carouselMove(1)" aria-label="Вперёд">&#8594;</button>
-  <div class="carousel-dots" id="carouselDots"></div>
-</div>
 
 <section id="yacht">
   <div class="wrap">
     <p class="sec-eye">Формат</p>
     <h2 class="sec-title">Как мы живём<br>на яхте</h2>
 
+    <div class="carousel-wrap" style="margin-bottom: 1px;">
+      <div class="carousel" id="yachtCarousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"><img src="photos/yacht-deck-sunset.jpg" alt="Яхта на закате" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="photos/yacht-sailing-open-sea.jpg" alt="Яхта в море" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="photos/yacht-cabin-interior.jpg" alt="Каюта на яхте" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="photos/yacht-cockpit-view.jpg" alt="Кокпит яхты" loading="lazy" /></div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-prev" onclick="carouselMove(-1)" aria-label="Назад">&#8592;</button>
+      <button class="carousel-btn carousel-next" onclick="carouselMove(1)" aria-label="Вперёд">&#8594;</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
     <div class="fmt-grid">
       <div class="fmt-card">
-        <div class="fmt-icon">⚓</div>
-        <div class="fmt-title">Современная яхта</div>
-        <p class="fmt-text">Комфортабельная яхта с просторными каютами по двое. Всё необходимое на борту — кухня, душ, навигация.</p>
+        <div class="fmt-card-body">
+          <div class="fmt-icon">⚓</div>
+          <div class="fmt-title">Современная яхта</div>
+          <p class="fmt-text">Комфортабельная яхта с просторными каютами по двое. Всё необходимое на борту — кухня, душ, навигация.</p>
+        </div>
       </div>
       <div class="fmt-card">
+        <div class="fmt-card-body">
         <div class="fmt-icon">🍽</div>
         <div class="fmt-title">Питание</div>
         <p class="fmt-text">Завтраки и обеды на борту. Ужины — в уютных ресторанах прямо в бухтах. Готовим вместе, едим с видом на море.</p>
+        </div>
       </div>
       <div class="fmt-card">
+        <div class="fmt-card-body">
         <div class="fmt-icon">🧭</div>
         <div class="fmt-title">Маршрут</div>
         <p class="fmt-text">Маршрут — ориентировочный. Мы живём по погоде, ветру и настроению. Именно так, по-нашему, и должна выглядеть настоящая экспедиция — не по рельсам, а навстречу неизвестному.</p>
+        </div>
       </div>
       <div class="fmt-card">
+        <div class="fmt-card-body">
         <div class="fmt-icon">🌊</div>
         <div class="fmt-title">Темп</div>
         <p class="fmt-text">Спокойный ритм: купание, яхтинг, закаты. Каждый день — новая бухта. Подходит новичкам.</p>
+        </div>
       </div>
     </div>
 
@@ -765,8 +887,6 @@
   </div>
 </section>
 
-<!-- WHY TURKEY -->
-<img class="full-img" src="photos/kas-coast-aerial-view.JPG" alt="Каш" loading="lazy" />
 
 <section id="why">
   <div class="wrap">
@@ -784,11 +904,17 @@
   </div>
 </section>
 
-<!-- INCLUDES -->
-<section id="price">
+<!-- PRICE + INCLUDES -->
+<section id="price" style="background: var(--bg2);">
   <div class="wrap">
-    <p class="sec-eye">Участие</p>
-    <h2 class="sec-title">Что входит</h2>
+    <p class="sec-eye">Стоимость</p>
+    <h2 class="sec-title">Цена тура</h2>
+
+    <div class="price-box" style="margin-bottom: 56px;">
+      <div class="price-num"><sup>€</sup>1 600</div>
+      <p class="price-note">за участника · без перелёта</p>
+      <p class="price-meta">20–27 июня · 8 дней · 8 мест</p>
+    </div>
 
     <div class="inc-grid">
       <div>
@@ -822,22 +948,7 @@
   </div>
 </section>
 
-<!-- PRICE -->
-<section style="background: var(--bg2);">
-  <div class="wrap">
-    <p class="sec-eye">Стоимость</p>
-    <h2 class="sec-title">Цена тура</h2>
-    <div class="price-box">
-      <div class="price-num"><sup>€</sup>1 600</div>
-      <p class="price-note">за участника · без перелёта</p>
-      <p class="price-meta">20–27 июня · 8 дней · 8 мест</p>
-    </div>
-  </div>
-</section>
-
 <!-- HOW TO BOOK -->
-<img class="full-img" src="photos/oludeniz-stars-night.jpg" alt="Звёздное небо над бухтой" loading="lazy" style="filter:brightness(0.75);" />
-
 <section>
   <div class="wrap" style="text-align:center;">
     <p class="sec-eye">Как попасть</p>
@@ -875,12 +986,11 @@
 </footer>
 
 <script>
-  // Carousel
+  // Yacht carousel
   let cur = 0;
   const track = document.getElementById('carouselTrack');
   const slides = track ? track.querySelectorAll('.carousel-slide') : [];
   const dotsWrap = document.getElementById('carouselDots');
-
   if (slides.length && dotsWrap) {
     slides.forEach((_, i) => {
       const d = document.createElement('div');
@@ -889,15 +999,45 @@
       dotsWrap.appendChild(d);
     });
   }
-
   function goTo(n) {
     cur = (n + slides.length) % slides.length;
     track.style.transform = `translateX(-${cur * 100}%)`;
     document.querySelectorAll('.carousel-dot').forEach((d, i) =>
       d.classList.toggle('active', i === cur));
   }
-
   function carouselMove(dir) { goTo(cur + dir); }
+
+  // Lightbox
+  const collageImgs = Array.from(document.querySelectorAll('.collage-item img')).map(i => i.src);
+  let lbCur = 0;
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCounter = document.getElementById('lbCounter');
+
+  function openLightbox(n) {
+    lbCur = n;
+    lbImg.src = collageImgs[lbCur];
+    lbCounter.textContent = `${lbCur + 1} / ${collageImgs.length}`;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if (!e || e.target === lb || e.target.classList.contains('lb-close')) {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  function lbMove(dir) {
+    lbCur = (lbCur + dir + collageImgs.length) % collageImgs.length;
+    lbImg.src = collageImgs[lbCur];
+    lbCounter.textContent = `${lbCur + 1} / ${collageImgs.length}`;
+  }
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') lbMove(-1);
+    if (e.key === 'ArrowRight') lbMove(1);
+    if (e.key === 'Escape') closeLightbox({target: lb});
+  });
 </script>
 </body>
 </html>
