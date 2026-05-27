@@ -88,9 +88,15 @@
     .hero-img {
       position: absolute; inset: 0;
       background-image: url('photos/hero-fethiye-sunset.jpeg');
+      
       background-size: cover;
       background-position: center 45%;
       filter: brightness(0.55);
+    }
+    @media (max-width: 680px) {
+      .hero-img {
+        background-image: url('photos/hero-mobile.jpg'); /* мобилка */
+      }
     }
     .hero-grad {
       position: absolute; inset: 0;
