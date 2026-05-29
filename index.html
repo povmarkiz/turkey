@@ -38,7 +38,7 @@
 
     /* NAV */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 48px;
       height: 62px;
@@ -677,6 +677,76 @@
 
     /* ORGANIZERS - see above */
 
+    /* BURGER */
+    .burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 400;
+    }
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 62px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 150;
+      background: var(--bg);
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 40px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--ff-serif);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--text);
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a:first-child { border-top: 1px solid var(--border); }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-menu .menu-cta {
+      margin-top: 32px;
+      font-family: var(--ff-sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--text);
+      color: #faf8f5 !important;
+      padding: 16px 40px;
+      border-radius: 40px;
+      border: none;
+      width: auto;
+    }
+
+    @media (max-width: 680px) {
+      .burger { display: flex; }
+    }
+
   </style>
 </head>
 <body>
@@ -691,7 +761,20 @@
     <a href="#price">Цена</a>
     <a class="nav-btn" href="https://t.me/xfufx" target="_blank">Забронировать</a>
   </div>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#route" onclick="toggleMenu()">Маршрут</a>
+  <a href="#yacht" onclick="toggleMenu()">Яхта</a>
+  <a href="#captain" onclick="toggleMenu()">Организаторы</a>
+  <a href="#why" onclick="toggleMenu()">Почему Турция</a>
+  <a href="#price" onclick="toggleMenu()">Цена</a>
+  <a href="#book" onclick="toggleMenu()">Как попасть</a>
+  <a href="https://t.me/xfufx" target="_blank" class="menu-cta">Забронировать место</a>
+</div>
 
 <!-- HERO -->
 <header id="hero">
@@ -1027,7 +1110,7 @@
 </section>
 
 <!-- HOW TO BOOK -->
-<section>
+<section id="book">
   <div class="wrap" style="text-align:center;">
     <p class="sec-eye">Как попасть</p>
     <h2 class="sec-title">Напиши мне<br>в Telegram</h2>
@@ -1120,6 +1203,13 @@
     if (e.key === 'ArrowRight') lbMove(1);
     if (e.key === 'Escape') closeLightbox({target: lb});
   });
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const burger = document.getElementById('burger');
+    menu.classList.toggle('open');
+    burger.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
 </script>
 </body>
 </html>
