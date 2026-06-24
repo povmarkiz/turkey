@@ -123,6 +123,18 @@
       color: rgba(255,255,255,0.65);
       margin-bottom: 18px;
     }
+    .hero-details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+    }
+    .hero-details-sep { opacity: 0.4; }
     .hero-title {
       font-family: var(--ff-serif);
       font-size: clamp(52px, 8vw, 108px);
@@ -130,7 +142,7 @@
       line-height: 0.95;
       letter-spacing: -0.01em;
       color: #ffffff;
-      margin-bottom: 36px;
+      margin-bottom: 28px;
     }
 
     /* BUTTONS */
@@ -753,7 +765,7 @@
 
 <!-- NAV -->
 <nav>
-  <span class="nav-logo"><a href="https://www.instagram.com/pov.markiz" target="_blank" style="color: var(--accent);">@pov.markiz</a> & <a href="https://www.instagram.com/spislaadko" target="_blank" style="color: var(--accent);">@spislaadko</a></span>
+  <span class="nav-logo"><a href="https://www.instagram.com/pov.markiz" target="_blank" style="color: var(--accent);">@pov.markiz</a></span>
   <div class="nav-links">
     <a href="#route">Маршрут</a>
     <a href="#yacht">Яхта</a>
@@ -781,8 +793,15 @@
   <div class="hero-img"></div>
   <div class="hero-grad"></div>
   <div class="hero-inner">
-    <p class="hero-label"><a href="https://www.instagram.com/pov.markiz" target="_blank">@pov.markiz</a> & <a href="https://www.instagram.com/spislaadko" target="_blank">@spislaadko</a> · Авторский тур</p>
+    <p class="hero-label"><a href="https://www.instagram.com/pov.markiz" target="_blank">@pov.markiz</a> · Авторский тур</p>
     <h1 class="hero-title">Яхтинг<br>в Турции</h1>
+    <div class="hero-details">
+      <span>26 сентября — 3 октября</span>
+      <span class="hero-details-sep">·</span>
+      <span>€1 350</span>
+      <span class="hero-details-sep">·</span>
+      <span>8 человек</span>
+    </div>
     <a class="btn" href="https://t.me/xfufx" target="_blank">Забронировать место</a>
   </div>
 </header>
@@ -851,11 +870,11 @@
     <div class="day">
       <div class="day-n">01</div>
       <div>
-        <div class="day-date">20 июня</div>
+        <div class="day-date">26 сентября</div>
         <h3 class="day-h">Фетхие — заселение на яхту</h3>
         <p class="day-p">Встреча в марине, знакомство с командой, закупка продуктов и первый совместный ужин. Ночь в домашней марине под звёздами.</p>
         <div class="day-inline-photo">
-          <img src="photos/day1-fethiye-marina.jpg" alt="Марина Фетхие" loading="lazy" />
+          <!-- <img src="photos/day1-fethiye-marina.jpg" alt="Марина Фетхие" loading="lazy" /> -->
         </div>
       </div>
     </div>
@@ -863,11 +882,11 @@
     <div class="day">
       <div class="day-n">02</div>
       <div>
-        <div class="day-date">21 июня</div>
+        <div class="day-date">27 сентября</div>
         <h3 class="day-h">Острова Терсане и Домуз</h3>
         <p class="day-p">Исследуем <strong>древние руины</strong>, купаемся в бирюзовых лагунах среди затонувших городов. Ужинаем в известном ресторане в Сарсале, ночуем в тихой бухте.</p>
         <div class="day-inline-photo">
-          <img src="photos/day2-tersane-island.jpg" alt="Острова Терсане" loading="lazy" />
+          <!-- <img src="photos/day2-tersane-island.jpg" alt="Острова Терсане" loading="lazy" /> -->
         </div>
       </div>
     </div>
@@ -875,11 +894,11 @@
     <div class="day">
       <div class="day-n">03</div>
       <div>
-        <div class="day-date">22 июня</div>
+        <div class="day-date">28 сентября</div>
         <h3 class="day-h">Остров Гемилер</h3>
         <p class="day-p">Стоянка на якоре возле необитаемого острова Гемилер. Подъём к самой верхушке острова, маяк и <strong>невероятный закат</strong>, который с каждым разом всё красивее. Ужинаем на яхте. Ночёвка на якоре.</p>
         <div class="day-inline-photo">
-          <img src="photos/day3-gemiler-island.jpg" alt="Остров Гемилер" loading="lazy" />
+          <!-- <img src="photos/day3-gemiler-island.jpg" alt="Остров Гемилер" loading="lazy" /> -->
         </div>
       </div>
     </div>
@@ -887,11 +906,11 @@
     <div class="day day--photo">
       <div class="day-n">04</div>
       <div>
-        <div class="day-date">23 июня</div>
+        <div class="day-date">29 сентября</div>
         <h3 class="day-h">Олюдениз — полёт на парапланах</h3>
         <p class="day-p">Полёт на парапланах по желанию. В обед переход до <strong>пляжа Патара</strong> — 12 км золотого песка и кристально чистая вода с видом на величественные скалы. Ощущение, что ты на краю света. Ночуем в бухте на якоре.</p>
         <div class="day-inline-photo">
-          <img src="photos/oludeniz-blue-lagoon-wide.jpg" alt="Олюдениз" loading="lazy" />
+          <!-- <img src="photos/oludeniz-blue-lagoon-wide.jpg" alt="Олюдениз" loading="lazy" /> -->
         </div>
       </div>
     </div>
@@ -899,11 +918,11 @@
     <div class="day day--photo">
       <div class="day-n">05</div>
       <div>
-        <div class="day-date">24 июня</div>
+        <div class="day-date">30 сентября</div>
         <h3 class="day-h">Каш — вечерний город</h3>
         <p class="day-p">С пляжа отправляемся в Каш, встаём в марину и гуляем по вечернему городу — атмосферу которого нереально передать словами. Необычные бары и ужин в ресторане.</p>
         <div class="day-inline-photo">
-          <img src="photos/kas-coast-turquoise.jpg" alt="Каш" loading="lazy" />
+          <!-- <img src="photos/kas-coast-turquoise.jpg" alt="Каш" loading="lazy" /> -->
         </div>
       </div>
     </div>
@@ -911,11 +930,11 @@
     <div class="day">
       <div class="day-n">06</div>
       <div>
-        <div class="day-date">25 июня</div>
+        <div class="day-date">1 октября</div>
         <h3 class="day-h">Голубая пещера и полуостров</h3>
         <p class="day-p">Просыпаемся в марине и едем до <strong>Голубой пещеры</strong> на тузике. Потом — полуостров рядом с Кашем: заброшенный отель на крайней точке, пляжи, тишина. Вечером ужин, ночью — переход до Долины бабочек.</p>
         <div class="day-inline-photo">
-          <img src="photos/day6-blue-cave.jpg" alt="Голубая пещера" loading="lazy" />
+          <!-- <img src="photos/day6-blue-cave.jpg" alt="Голубая пещера" loading="lazy" /> -->
         </div>
       </div>
     </div>
@@ -923,11 +942,11 @@
     <div class="day">
       <div class="day-n">07</div>
       <div>
-        <div class="day-date">26 июня</div>
+        <div class="day-date">2 октября</div>
         <h3 class="day-h">Долина бабочек — поход к водопаду</h3>
         <p class="day-p">Поход к водопаду, купание в природных бассейнах. Переход к Фетхие в домашнюю марину — финальный совместный ужин.</p>
         <div class="day-inline-photo">
-          <img src="photos/day7-butterfly-valley.jpg" alt="Долина бабочек" loading="lazy" />
+          <!-- <img src="photos/day7-butterfly-valley.jpg" alt="Долина бабочек" loading="lazy" /> -->
         </div>
       </div>
     </div>
@@ -935,11 +954,11 @@
     <div class="day">
       <div class="day-n">08</div>
       <div>
-        <div class="day-date">27 июня</div>
+        <div class="day-date">3 октября</div>
         <h3 class="day-h">Выселение и дорога домой</h3>
         <p class="day-p">Раннее выселение с яхты и трансфер в аэропорт.</p>
         <div class="day-inline-photo">
-          <img src="photos/day8-fethiye-marina.jpg" alt="Олюдениз" loading="lazy" />
+        <!--   <img src="photos/day8-fethiye-marina.jpg" alt="Олюдениз" loading="lazy" /> -->
         </div>
       </div>
     </div>
@@ -1005,23 +1024,13 @@
       </div>
     </div>
 
-    <div class="ratings">
-      <div>
-        <div class="rating-label">Сложность</div>
-        <div class="stars">★★★☆☆</div>
-      </div>
-      <div>
-        <div class="rating-label">Комфорт</div>
-        <div class="stars">★★★★☆</div>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- CAPTAIN -->
 <section id="captain">
   <div class="captain-inner">
-    <p class="sec-eye" style="text-align:center;">Организаторы</p>
+    <p class="sec-eye" style="text-align:center;">Капитан</p>
     <div class="organizers-grid">
       <div class="organizer">
         <div class="captain-photo">
@@ -1031,17 +1040,6 @@
         <div class="captain-role">Капитан · Организатор</div>
         <p class="captain-text">
           Сертифицированный яхтенный капитан и автор блога <a href="https://www.instagram.com/pov.markiz" target="_blank" style="color: var(--accent);">@pov.markiz</a>. Уже несколько лет вожу небольшие группы в путешествия — по Турции, Канарам, Мадейре, Японии, Африке и дальше. Для меня это не работа, а способ показать людям мир так, как я вижу его сам.
-        </p>
-      </div>
-      <div class="organizer">
-        <div class="captain-photo">
-          <img src="photos/organizer2-portrait.jpg" alt="Настя" />
-        </div>
-        <div class="captain-name">Настя</div>
-        <div class="captain-role">Со-организатор · вайб-мейкер</div>
-        <p class="captain-text">
-          Путешественница, инфлюенсер и автор блога <a href="https://www.instagram.com/spislaadko" target="_blank" style="color: var(--accent);">@spislaadko</a>. Отвечаю за нашу команду, girl trip атмосферу, контент, перерывы на йогу и повышение дофамина.
-Для меня это первый и очень значимый опыт контакта со своей аудиторией, хочу прожить его по-настоящему и от всего сердца.
         </p>
       </div>
     </div>
@@ -1072,9 +1070,9 @@
     <h2 class="sec-title">Цена тура</h2>
 
     <div class="price-box" style="margin-bottom: 56px;">
-      <div class="price-num"><sup>€</sup>1 600</div>
+      <div class="price-num"><sup>€</sup>1 350</div>
       <p class="price-note">за участника · без перелёта</p>
-      <p class="price-meta">20–27 июня · 8 дней · 8 мест</p>
+      <p class="price-meta">26 сентября — 3 октября · 8 дней · 8 мест</p>
     </div>
 
     <div class="inc-grid">
@@ -1137,7 +1135,7 @@
     <a class="btn" href="https://t.me/xfufx" target="_blank">Написать в Telegram</a>
     <br>
     <span style="display:block; margin-top:20px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-muted);">
-      8 мест · 20–27 июня
+      8 мест · 26 сентября — 3 октября
     </span>
   </div>
 </section>
@@ -1146,7 +1144,7 @@
 <footer>
   <div class="footer-logo">Яхтинг в Турции</div>
   <p class="footer-meta">
-    <a href="https://www.instagram.com/pov.markiz" target="_blank">@pov.markiz</a> & <a href="https://www.instagram.com/spislaadko" target="_blank">@spislaadko</a> · Авторский тур · Июнь 2026 · Турецкое побережье
+    <a href="https://www.instagram.com/pov.markiz" target="_blank">@pov.markiz</a> · Авторский тур · Июнь 2026 · Турецкое побережье
   </p>
 </footer>
 
