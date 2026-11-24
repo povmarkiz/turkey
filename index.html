@@ -1,1213 +1,822 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Яхтинг в Турции — @pov.markiz</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg:       #faf8f5;
-      --bg2:      #f4f0eb;
-      --bg3:      #ede8e0;
-      --surface:  #ffffff;
-      --border:   rgba(0,0,0,0.08);
-      --accent:   #b5896a;
-      --text:     #1e1a16;
-      --text-dim: rgba(30,26,22,0.58);
-      --text-muted: rgba(30,26,22,0.38);
-      --ff-serif: 'Cormorant Garamond', Georgia, serif;
-      --ff-sans:  'Manrope', sans-serif;
-      --max:      720px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Яхтинг в Турции, 8–15 мая 2027 | The Crew</title>
+<meta name="description" content="Неделя на парусной яхте вдоль Ликийского берега Турции, 8–15 мая 2027. До 7 участников, бирюзовые бухты, Олюдениз, Каш, Голубая пещера и Долина бабочек.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://povmarkiz.github.io/turkey/">
+<meta property="og:title" content="Яхтинг в Турции, 8–15 мая 2027">
+<meta property="og:description" content="Неделя на яхте вдоль Ликийского берега: бирюзовые бухты, ночи на якоре и закаты. До 7 участников.">
+<meta property="og:image" content="https://povmarkiz.github.io/turkey/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#EAF4F2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23123A45'/%3E%3Cpath d='M4 23l7-9 4 5 3-4 10 8z' fill='%239FD8D3'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23E9B3A8'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Grotesk Fallback';font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/inter-cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Grotesk Fallback';font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/inter-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/golos-text-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/golos-text-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/golos-text-cyrillic-500-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/golos-text-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/golos-text-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/golos-text-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{
+  --mist:#EAF4F2; --shell:#FBF7F1; --ink:#123A45; --ink-2:#4B6870;
+  --protea:#E3A58C; --protea-lt:#F6DED3; --apricot:#F2C38A; --apricot-lt:#FBE8CF;
+  --fynbos:#B3B98B; --fynbos-lt:#E6E8D4; --lagoon:#9FD8D3; --lagoon-lt:#D5EEEB;
+  --line:rgba(18,58,69,.12);
+  --display:'Helvetica Neue', Helvetica, Arial, 'Grotesk Fallback', sans-serif;
+  --body:'Golos Text', system-ui, sans-serif;
+  --wrap:1160px;
+  --band:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='22' viewBox='0 0 48 22'%3E%3Crect width='48' height='22' fill='%23FBE8CF'/%3E%3Cpath d='M0 .75h48M0 21.25h48' stroke='%23123A45' stroke-width='1.5'/%3E%3Cpath d='M21 2h6v3h3v3h3v3h-3v3h-3v3h-6v-3h-3v-3h-3v-3h3V5h3z' fill='%23E3A58C' stroke='%23123A45' stroke-width='1.2' stroke-linejoin='miter'/%3E%3Cpath d='M24 7l4 4-4 4-4-4z' fill='%239FD8D3' stroke='%23123A45' stroke-width='1.1'/%3E%3Cpath d='M0 4l5 0 0 3-2 0 0 2-3 0M0 18l5 0 0-3-2 0 0-2-3 0M48 4l-5 0 0 3 2 0 0 2 3 0M48 18l-5 0 0-3 2 0 0-2 3 0' fill='%23B3B98B' stroke='%23123A45' stroke-width='1.1'/%3E%3Ccircle cx='6.5' cy='11' r='1.4' fill='%23123A45'/%3E%3Ccircle cx='41.5' cy='11' r='1.4' fill='%23123A45'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--mist);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.08}
+h2{font-size:clamp(28px,4vw,44px);font-weight:700;max-width:18ch}
+.sec{padding:96px 0}
+.sec-head{margin-bottom:44px;display:grid;gap:16px}
+.sec-head p{color:var(--ink-2);max-width:56ch}
+.band{height:22px;background:var(--band) repeat-x left center/48px 22px}
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--ff-sans);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    img { display: block; width: 100%; }
-    a { color: inherit; text-decoration: none; }
+/* кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 30px;border-radius:999px;background:var(--ink);color:var(--shell);font:500 16px/1 var(--body);text-decoration:none;transition:transform .2s,background .2s}
+.btn:hover{background:#0b2b33;transform:translateY(-1px)}
+.btn-light{background:var(--shell);color:var(--ink)}
+.btn-light:hover{background:#fff}
 
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 48px;
-      height: 62px;
-      background: rgba(250,248,245,0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: var(--ff-serif);
-      font-size: 17px;
-      color: var(--accent);
-    }
-    .nav-links {
-      display: flex; align-items: center; gap: 36px;
-    }
-    .nav-links a {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--text); }
-    .nav-btn {
-      background: var(--text);
-      color: #faf8f5 !important;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 10px 22px;
-      border-radius: 40px;
-    }
-    .nav-btn:hover { background: #3a3330; color: #faf8f5 !important; }
+/* навигация */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s;color:var(--shell)}
+.nav.solid{background:rgba(234,244,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav-in{max-width:var(--wrap);margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:24px}
+.logo{font:700 17px/1 var(--display);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.nav-links{display:flex;gap:6px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{white-space:nowrap;text-decoration:none;font-size:15px;padding:8px 14px;border-radius:999px;transition:background .2s}
+.nav-links a:hover{background:rgba(255,255,255,.18)}
+.nav.solid .nav-links a:hover{background:var(--lagoon-lt)}
+.nav-links a.cta{background:var(--shell);color:var(--ink)}
+.nav.solid .nav-links a.cta{background:var(--ink);color:var(--shell)}
+@media (max-width:760px){
+  .nav-in{flex-wrap:wrap;gap:8px 16px;padding:12px 16px 10px}
+  .nav-links{margin-left:0;width:100%}
+  .nav-links{gap:4px}
+  .nav-links a{flex:1 1 auto;text-align:center;font-size:13px;padding:7px 6px;background:rgba(255,255,255,.16)}
+  .nav.solid .nav-links a{background:var(--shell)}
+  .nav-links a.cta{display:none}
+}
 
-    /* HERO */
-    #hero {
-      position: relative;
-      height: 100svh;
-      min-height: 580px;
-      display: flex;
-      align-items: center;
-      padding-top: 70px;
-      overflow: hidden;
-    }
-    .hero-img {
-      position: absolute; inset: 0;
-      background-image: url('photos/hero-fethiye-sunset.jpeg');
-      
-      background-size: cover;
-      background-position: center 45%;
-      filter: brightness(0.55);
-    }
-    @media (max-width: 680px) {
-      .hero-img {
-        background-image: url('photos/hero-mobile.jpg'); /* мобилка */
-      }
-    }
-    .hero-grad {
-      position: absolute; inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(10,8,6,0.72) 0%,
-        rgba(10,8,6,0.15) 50%,
-        transparent 75%
-      );
-    }
-    .hero-inner {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 48px;
-      text-align: center;
-    }
-    .hero-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 18px;
-    }
-    .hero-details {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      font-size: 14px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.75);
-      letter-spacing: 0.05em;
-      margin-bottom: 32px;
-    }
-    .hero-details-sep { opacity: 0.4; }
-    .hero-title {
-      font-family: var(--ff-serif);
-      font-size: clamp(52px, 8vw, 108px);
-      font-weight: 300;
-      line-height: 0.95;
-      letter-spacing: -0.01em;
-      color: #ffffff;
-      margin-bottom: 28px;
-    }
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:var(--shell);isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-2;object-position:50% 62%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,58,69,.55) 0%,rgba(18,58,69,.25) 38%,rgba(18,58,69,0) 60%,rgba(18,58,69,.2) 100%)}
+.hero-in{padding-bottom:40px;padding-top:150px}
+.hero{justify-content:flex-start}
+.hero>.wrap:last-child{margin-top:auto}
+@media (min-width:1000px){.hero .hero-in h1{font-size:clamp(72px,7.4vw,120px);max-width:none}.hero .hero-sub{max-width:44ch}}
+@media (max-width:760px){.hero-in{padding-top:118px}}
+.hero-kicker{font-size:16px;margin-bottom:18px;opacity:.95}
+.hero h1{font-size:clamp(48px,11.5vw,150px);max-width:9ch;font-weight:700;letter-spacing:-.045em;line-height:.92;margin-left:-.03em}
+.hero-sub{font-size:clamp(18px,2.4vw,24px);margin-top:18px;max-width:30ch;line-height:1.35}
+.facts{position:relative;background:var(--shell);color:var(--ink);border-radius:22px 22px 0 0;margin-top:36px}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr) auto;align-items:center}
+.fact{padding:22px 24px;border-right:1px solid var(--line)}
+.fact b{display:block;font:700 clamp(17px,1.75vw,22px)/1.15 var(--display);letter-spacing:-.02em;white-space:nowrap}
+.fact span{font-size:14px;color:var(--ink-2)}
+.facts .btn{margin:0 22px}
+@media (max-width:860px){
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .facts .btn{grid-column:1/-1;margin:16px}
+}
+.facts + .band{background-color:var(--shell)}
 
-    /* BUTTONS */
-    .btn {
-      display: inline-block;
-      background: var(--text);
-      color: var(--bg) !important;
-      font-family: var(--ff-sans);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 18px 48px;
-      border-radius: 40px;
-      box-shadow: 0 4px 20px rgba(30,26,22,0.2);
-      cursor: pointer;
-    }
-    .btn:hover { background: #3a3330; }
+.hero>.wrap{width:100%}
+/* интро */
+.intro{background:var(--shell);padding:84px 0 96px}
+.intro-grid{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:start}
+.intro h2{font-size:clamp(26px,3.2vw,38px)}
+.intro p{font-size:19px;line-height:1.65;max-width:58ch}
+.intro p+p{margin-top:18px}
+@media (max-width:860px){.intro-grid{grid-template-columns:1fr;gap:24px}}
 
-    /* INTRO */
-    #intro {
-      padding: 100px 20px 80px;
-      text-align: center;
-    }
-    .intro-eyebrow {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 28px;
-    }
-    .intro-body {
-      max-width: var(--max);
-      margin: 0 auto;
-      font-family: var(--ff-serif);
-      font-size: clamp(20px, 2.6vw, 26px);
-      font-weight: 300;
-      line-height: 1.65;
-      color: var(--text-dim);
-    }
-    .intro-body strong { color: var(--text); font-weight: 500; }
+/* галерея */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px}
+.g-item{position:relative;overflow:hidden;border-radius:16px;background:var(--lagoon-lt)}
+.g-item img{transition:transform .6s}
+.g-item:hover img{transform:scale(1.04)}
+.g-1{grid-column:span 3;grid-row:span 3}.g-2{grid-column:span 3;grid-row:span 2}
+.g-3{grid-column:span 2}.g-4{grid-column:span 1}
+.g-5,.g-6,.g-7{grid-column:span 2;grid-row:span 2}
+.g-8,.g-9{grid-column:span 3;grid-row:span 2}
+.car-ctl{display:none}
+@media (max-width:860px){
+  .gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 -22px;padding:0 22px;scrollbar-width:none}
+  .gal::-webkit-scrollbar{display:none}
+  .g-item{flex:0 0 86%;aspect-ratio:3/4;scroll-snap-align:center}
+  .car-ctl{display:flex}
+}
+.car-ctl{align-items:center;justify-content:space-between;margin-top:16px}
+.car-btns{display:flex;gap:8px}
+.circ{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;background:var(--shell);transition:background .2s}
+.circ:hover{background:#fff}
+.circ svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:1.8}
+.count{font:700 15px/1 var(--display);color:var(--ink-2);font-variant-numeric:tabular-nums}
 
-    /* FULL IMAGE */
-    .full-img {
-      width: 100%;
-      aspect-ratio: 16/7;
-      object-fit: cover;
-    }
+/* почему */
+.why{background:var(--lagoon-lt)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 20px}
+.why-card .why-ph{aspect-ratio:4/5;border-radius:999px 999px 18px 18px;overflow:hidden;margin-bottom:16px;background:var(--lagoon)}
+.why-card:nth-child(even) .why-ph{border-radius:18px 18px 999px 999px}
+.why-card h3{font-size:19px;margin-bottom:6px}
+.why-card p{font-size:15.5px;color:var(--ink-2)}
+@media (max-width:860px){
+  .why-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -22px;padding:0 22px;scroll-padding:0 22px;gap:16px;scrollbar-width:none}
+  .why-grid::-webkit-scrollbar{display:none}
+  .why-card{flex:0 0 72%;scroll-snap-align:start}
+}
 
-    /* SECTION WRAP */
-    .wrap {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 96px 20px;
-    }
-    .sec-eye {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 20px;
-    }
-    .sec-title {
-      font-family: var(--ff-serif);
-      font-size: clamp(38px, 5.5vw, 60px);
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -0.005em;
-      margin-bottom: 56px;
-    }
+/* маршрут */
+.route-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px}
+.route-top .car-ctl{display:flex;margin:0;gap:18px}
+.days{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 22px 8px;scroll-padding:0 22px;scrollbar-width:none;max-width:calc(var(--wrap) + 44px);margin:0 auto}
+.days::-webkit-scrollbar{display:none}
+.day{flex:0 0 min(380px,82vw);scroll-snap-align:start;background:var(--shell);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.day-ph{position:relative;aspect-ratio:4/3;background:var(--lagoon-lt);overflow:hidden;flex:none}
+.day-ph img{position:absolute;inset:0}
+.day-villa{position:absolute;left:14px;top:14px;background:rgba(251,248,243,.92);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500}
+.day-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.day-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
+.day-n{font:700 44px/1 var(--display);letter-spacing:-.04em}
+.day-date{color:var(--ink-2);font-size:15px}
+.day h3{font-size:21px;margin-bottom:10px}
+.day p{font-size:15.5px;color:var(--ink-2)}
+.day-high{margin-top:auto;padding-top:18px}
+.day .day-high{color:var(--ink);display:flex;gap:10px;align-items:flex-start;background:var(--apricot-lt);border-radius:14px;padding:12px 14px;margin-top:auto}
+.day-body > p:not(.day-high){margin-bottom:18px}
+.day-high svg{flex:0 0 18px;height:18px;fill:var(--ink);margin-top:2px}
+.day-high b{font-weight:600}
+.route-note{margin-top:22px;color:var(--ink-2);font-size:15px}
+.route-dots{display:flex;gap:6px;justify-content:center;margin-top:18px}
+.route-dots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:background .2s,width .2s}
+.route-dots i.on{background:var(--ink);width:22px;border-radius:4px}
+@media (max-width:760px){.route-top .car-ctl{display:none}}
 
-    /* ROUTE DAYS */
-    .day {
-      display: grid;
-      grid-template-columns: 64px 1fr;
-      gap: 0 36px;
-      padding: 48px 0;
-      border-top: 1px solid var(--border);
-      align-items: start;
-    }
-    .day:last-child { border-bottom: 1px solid var(--border); }
-    .day-n {
-      font-family: var(--ff-serif);
-      font-size: 52px;
-      font-weight: 300;
-      color: rgba(30,26,22,0.1);
-      line-height: 1;
-      padding-top: 4px;
-    }
-    .day-date {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-    .day-h {
-      font-family: var(--ff-serif);
-      font-size: 28px;
-      font-weight: 400;
-      line-height: 1.15;
-      margin-bottom: 14px;
-    }
-    .day-p {
-      font-size: 15px;
-      color: var(--text-dim);
-      line-height: 1.75;
-      max-width: 520px;
-    }
-    .day-p strong { color: var(--text); font-weight: 500; }
+/* виллы */
+.stay{background:var(--shell)}
+.villa{display:grid;grid-template-columns:5fr 7fr;gap:44px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
+.villa:first-of-type{border-top:0}
+.villa-txt h3{font-size:clamp(26px,3.4vw,36px);font-weight:700;margin-bottom:6px}
+.villa-when{color:var(--ink-2);margin-bottom:18px}
+.villa-txt p+p{margin-top:12px}
+.villa-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.villa-tags span{padding:7px 13px;border-radius:999px;font-size:14px;background:var(--fynbos-lt)}
+.vg{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;scrollbar-width:none;border-radius:18px}
+.vg::-webkit-scrollbar{display:none}
+.vg-item{flex:0 0 100%;aspect-ratio:3/2;scroll-snap-align:center;overflow:hidden;border-radius:18px;background:var(--lagoon-lt)}
+.vg-item img{transition:transform .6s}.vg-item:hover img{transform:scale(1.03)}
+.yg-ctl{display:flex!important;margin-top:14px}
+@media (max-width:860px){
+  .villa{grid-template-columns:1fr;gap:22px}
+  .vg{margin:0 -22px;padding:0 22px;scroll-padding:0 22px;border-radius:0}
+  .vg-item{flex:0 0 86%;scroll-snap-align:start;border-radius:16px}
+}
+.rooms{background:var(--apricot-lt);border-radius:20px;padding:22px 26px;margin:28px 0 40px;display:flex;gap:18px;align-items:center;font-size:17px}
+.rooms b{font-weight:600}
+.info{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.info-i{border:1px solid var(--line);border-radius:20px;padding:22px}
+.info-i svg{width:30px;height:30px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.info-i h3{font-size:17px;margin-bottom:6px}
+.info-i p{font-size:15px;color:var(--ink-2)}
+@media (max-width:860px){.info{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.info{grid-template-columns:1fr;gap:10px}.info-i{display:grid;grid-template-columns:30px 1fr;column-gap:14px;padding:18px}.info-i svg{grid-row:span 2;margin:0}}
 
-    /* DAY PHOTO */
-    .day-photo img {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-    }
+/* организатор */
+.org{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start;max-width:980px;margin-bottom:56px}
+.org p+p{margin-top:12px}
+.wm-h{font-size:clamp(22px,2.6vw,28px);margin-bottom:20px}
+.org-ph{width:240px;height:240px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 8px var(--shell),0 0 0 9px var(--line)}
+.org h2{margin-bottom:6px}
+.org-role{color:var(--ink-2);margin-bottom:18px}
+.org-role a{text-decoration-color:var(--protea);text-underline-offset:3px}
+.org p{max-width:56ch}
+@media (max-width:700px){.org{grid-template-columns:1fr;gap:24px}.org-ph{width:160px;height:160px}}
 
-    /* FORMAT */
-    .fmt-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-    }
-    .fmt-card { background: var(--surface); }
-    .fmt-card-body { padding: 32px 36px; }
-    .fmt-card-img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
-    }
-    .fmt-icon { font-size: 22px; margin-bottom: 14px; }
-    .fmt-title {
-      font-family: var(--ff-serif);
-      font-size: 22px;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-    .fmt-text { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+/* стоимость */
+.price{background:var(--mist)}
+#faq{background:var(--shell)}
+.price-top{display:grid;grid-template-columns:auto 1fr;gap:20px 48px;align-items:end;margin-bottom:40px}
+.price-num{font:700 clamp(60px,10vw,120px)/.9 var(--display);letter-spacing:-.045em}
+.price-meta{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:10px}
+.pill{padding:8px 14px;border-radius:999px;background:var(--shell);font-size:15px}
+.price-sub{color:var(--ink-2);grid-column:1/-1;margin-top:-6px}
+.inc{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.inc-box{border-radius:22px;padding:28px}
+.inc-box.yes{background:var(--fynbos-lt)}
+.inc-box.no{background:var(--protea-lt)}
+.inc-box h3{font-size:19px;margin-bottom:16px}
+.inc-box ul{list-style:none;display:grid;gap:10px}
+.inc-box li{display:flex;justify-content:space-between;gap:16px;padding-bottom:10px;border-bottom:1px solid var(--line);font-size:16px}
+.inc-box li:last-child{border-bottom:0;padding-bottom:0}
+.inc-box li span{color:var(--ink-2);white-space:nowrap}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.term{border:1px solid var(--line);border-radius:20px;padding:22px}
+.term h3{font-size:16px;margin-bottom:8px}
+.term p{font-size:15px;color:var(--ink-2)}
+@media (max-width:860px){.price-top{grid-template-columns:1fr}.inc,.terms{grid-template-columns:1fr}}
 
-    /* CAPTAIN */
-    #captain {
-      padding: 96px 20px;
-      background: var(--bg2);
-      text-align: center;
-    }
-    .captain-inner {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-    .organizers-grid {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      flex-wrap: nowrap;
-      margin-top: 40px;
-      align-items: flex-start;
-    }
-    .organizer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1;
-      max-width: 360px;
-    }
-    @media (max-width: 680px) {
-      .organizers-grid { flex-wrap: wrap; }
-    }
-    .captain-photo {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 28px;
-      border: 3px solid var(--bg3);
-    }
-    .captain-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .captain-name {
-      font-family: var(--ff-serif);
-      font-size: 32px;
-      font-weight: 400;
-      margin-bottom: 6px;
-    }
-    .captain-role {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 24px;
-    }
-    .captain-text {
-      font-size: 13px;
-      color: var(--text-dim);
-      line-height: 1.55;
-      max-width: 540px;
-      margin: 0 auto;
-    }
+/* faq */
+.faq-list{max-width:820px}
+.faq-i{border-top:1px solid var(--line)}
+.faq-i:last-child{border-bottom:1px solid var(--line)}
+.faq-i summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font:700 18px/1.35 var(--display);position:relative}
+.faq-i summary::-webkit-details-marker{display:none}
+.faq-i summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-10px;border-right:1.6px solid var(--ink);border-bottom:1.6px solid var(--ink);transform:rotate(45deg);transition:transform .25s}
+.faq-i[open] summary::after{transform:rotate(225deg);margin-top:-3px}
+.faq-i p{padding:0 44px 24px 0;color:var(--ink-2);max-width:64ch}
 
-    /* WHY */
-    .why-list { list-style: none; }
-    .why-li {
-      display: flex;
-      gap: 20px;
-      padding: 22px 0;
-      border-top: 1px solid var(--border);
-      align-items: flex-start;
-    }
-    .why-li:last-child { border-bottom: 1px solid var(--border); }
-    .why-dot {
-      width: 5px; height: 5px;
-      background: var(--accent);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 10px;
-    }
-    .why-t { font-size: 15px; color: var(--text-dim); line-height: 1.65; }
-    .why-t strong { color: var(--text); font-weight: 500; }
+/* запись */
+.book{background:var(--ink);color:var(--shell);padding:96px 0 0}
+.book h2{max-width:18ch}
+.book .sec-head p{color:rgba(251,248,243,.75)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s;margin-bottom:48px}
+.steps li{counter-increment:s;border-top:1px solid rgba(251,248,243,.25);padding-top:18px}
+.steps li::before{content:counter(s);display:block;font:700 40px/1 var(--display);margin-bottom:12px;color:var(--apricot)}
+.steps h3{font-size:17px;margin-bottom:6px}
+.steps p{font-size:15px;color:rgba(251,248,243,.72)}
+.step-btn{margin-top:16px;padding:13px 22px;font-size:15px}
+.steps{margin-bottom:72px}
+@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.book-cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;padding-bottom:72px}
+.book-cta .pill{background:rgba(251,248,243,.1);color:var(--shell)}
+.book .band{opacity:.95}
+footer{background:var(--ink);color:rgba(251,248,243,.7);padding:28px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--shell)}
 
-    /* INCLUDES */
-    .inc-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-    }
-    .inc-h {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-    .inc-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-    .inc-list li {
-      font-size: 15px;
-      color: var(--text-dim);
-      display: flex; gap: 14px; align-items: flex-start;
-    }
-    .inc-list li::before {
-      content: '';
-      width: 5px; height: 5px;
-      background: var(--accent);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 9px;
-    }
-    .not-inc li::before {
-      background: transparent;
-      border: 1px solid rgba(30,26,22,0.2);
-    }
-    .pay-note {
-      font-size: 14px;
-      color: var(--text-dim);
-      line-height: 1.75;
-      padding: 28px 0;
-      border-top: 1px solid var(--border);
-      margin-top: 48px;
-    }
-    .pay-note strong { color: var(--text); font-weight: 500; }
+/* зачем я это делаю */
+.why-me{background:var(--shell)}
+.wm-top{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:start;margin-bottom:44px}
+.wm-lead{font-size:20px;line-height:1.6;max-width:60ch}
+.wm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.wm-i{border-radius:22px;padding:28px;background:var(--fynbos-lt)}
+.wm-i h3{font-size:20px;margin-bottom:10px}
+.wm-i p{font-size:16px;color:var(--ink-2)}
+.wm-final{font:700 clamp(24px,3.2vw,36px)/1.2 var(--display);letter-spacing:-.025em;margin-top:56px;max-width:22ch}
+@media (max-width:860px){.wm-top,.wm-grid{grid-template-columns:1fr;gap:18px}.wm-lead{font-size:18px}}
 
-    /* PRICE */
-    .price-box {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      padding: 60px;
-      text-align: center;
-    }
-    .price-num {
-      font-family: var(--ff-serif);
-      font-size: 96px;
-      font-weight: 300;
-      line-height: 1;
-      color: var(--text);
-    }
-    .price-num sup { font-size: 44px; vertical-align: 0.25em; }
-    .price-note {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 10px;
-    }
-    .price-meta {
-      font-size: 11px;
-      color: var(--text-muted);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
+.car-mob{display:none}
+@media (max-width:860px){.car-mob{display:flex;margin-top:18px}}
+/* другие туры — как на главной */
+.tours{background:var(--mist)}
+.tour-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -22px;padding:0 22px;scroll-padding:0 22px}
+.tour-grid::-webkit-scrollbar{display:none}
+.tour-grid .card{flex:0 0 clamp(240px,calc((100% - 32px)/3.3),330px);scroll-snap-align:start}
+.tours-ctl{display:flex!important;margin-top:18px}
+.card{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;isolation:isolate;background:var(--ink);cursor:pointer;text-decoration:none}
+.card .c-ph{position:absolute;inset:0;z-index:-1}
+.card .c-ph img{position:absolute;inset:0;transition:transform .7s}
+.card:hover .c-ph img{transform:scale(1.04)}
+.card .c-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,40,.3),rgba(15,30,40,0) 28%,rgba(15,30,40,.1) 48%,rgba(15,30,40,.8))}
+.c-date{position:absolute;left:12px;top:12px;z-index:2;background:rgba(251,248,243,.94);color:var(--ink);border-radius:999px;padding:6px 11px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.c-date::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.c-price{position:absolute;left:12px;top:50px;z-index:2;background:var(--ink);color:var(--shell);border-radius:999px;padding:6px 11px;font-size:13px;font-weight:600}
+.c-body{padding:18px}
+.c-body h3{font-size:24px;letter-spacing:-.03em;line-height:1.05}
+.c-body p{font-size:14.5px;line-height:1.4;color:rgba(255,255,255,.88);margin-top:6px}
+.c-foot{display:flex;align-items:center;gap:10px;margin-top:14px}
+.c-btn{background:var(--shell);color:var(--ink);border-radius:999px;padding:10px 16px;font-size:14px;font-weight:600}
+.c-soon{background:rgba(15,30,40,.35);border:1px solid rgba(255,255,255,.55);color:#fff;border-radius:999px;padding:9px 14px;font-size:14px;font-weight:600}
+@media (max-width:860px){
+  .tour-grid{gap:10px}
+  .tour-grid .card{flex-basis:clamp(210px,40%,280px);border-radius:18px}
+  .c-body{padding:14px}
+  .c-body h3{font-size:20px}
+  .c-body p{display:none}
+  .c-btn,.c-soon{font-size:13px;padding:8px 12px}
+  .c-foot{margin-top:10px}
+  .c-date{font-size:12px;padding:5px 10px;left:10px;top:10px}
+  .c-price{font-size:12px;padding:5px 10px;left:10px;top:44px}
+}
+@media (max-width:600px){.tour-grid .card{flex-basis:64%}}
+/* яхта */
+.yacht-grid{display:grid;grid-template-columns:5fr 7fr;gap:44px;align-items:center;margin-bottom:40px}
+.yg-wrap{min-width:0}
+.yacht-note{margin-top:16px;font-size:15px;color:var(--ink-2)}
+@media (max-width:860px){.yacht-grid{grid-template-columns:1fr;gap:22px}}
+.co{display:block;margin-top:22px;padding:14px 18px;border-radius:18px;background:var(--lagoon-lt);max-width:56ch}
+/* планшет: карточки поменьше */
+@media (min-width:600px) and (max-width:860px){
+  .g-item{flex:0 0 44%}
+  .why-card{flex:0 0 38%}
+  .vg-item{flex:0 0 62%}
+  .day{flex:0 0 340px}
+}
+/* потолок ширины карточек в каруселях на узких экранах */
+@media (max-width:860px){
+  .g-item{flex-basis:min(86%,320px)!important}
+  .why-card{flex-basis:min(78%,280px)!important}
+  .vg-item{flex-basis:min(82%,400px)!important}
+}
+@media (min-width:600px) and (max-width:860px){
+  .g-item{flex-basis:min(44%,320px)!important}
+  .why-card{flex-basis:min(38%,280px)!important}
+}
+/* мобильная кнопка */
+.mcta{position:fixed;left:16px;right:16px;bottom:max(14px,env(safe-area-inset-bottom));z-index:40;transform:translateY(140%);transition:transform .35s;display:none}
+.mcta.on{transform:none}
+.mcta .btn{width:100%;box-shadow:0 10px 30px rgba(18,58,69,.25)}
+@media (max-width:760px){.mcta{display:block}}
 
-    /* STEPS */
-    .steps { list-style: none; margin-bottom: 52px; }
-    .step {
-      display: grid;
-      grid-template-columns: 44px 1fr;
-      gap: 0 24px;
-      padding: 26px 0;
-      border-top: 1px solid var(--border);
-      align-items: center;
-    }
-    .step:last-child { border-bottom: 1px solid var(--border); }
-    .step-n {
-      font-family: var(--ff-serif);
-      font-size: 36px;
-      font-weight: 300;
-      color: rgba(30,26,22,0.15);
-      line-height: 1;
-    }
-    .step-t { font-size: 15px; color: var(--text-dim); line-height: 1.6; }
-    .step-t strong { color: var(--text); font-weight: 500; }
-
-    /* RATINGS */
-    .ratings {
-      display: flex; gap: 48px;
-      margin-top: 40px;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-    }
-    .rating-label {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-    .stars { color: var(--accent); font-size: 15px; letter-spacing: 2px; }
-
-    /* DIVIDER */
-    .divider {
-      width: 36px; height: 1px;
-      background: var(--accent);
-      opacity: 0.4;
-    }
-    .divider.center { margin: 0 auto; }
-
-    /* FOOTER */
-    footer {
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      padding: 52px 20px;
-      text-align: center;
-    }
-    .footer-logo {
-      font-family: var(--ff-serif);
-      font-size: 30px;
-      font-weight: 300;
-      color: var(--accent);
-      margin-bottom: 14px;
-    }
-    .footer-meta {
-      font-size: 12px;
-      color: var(--text-muted);
-      letter-spacing: 0.07em;
-    }
-    .footer-meta a { color: var(--text-dim); }
-    .footer-meta a:hover { color: var(--accent); }
-
-    /* MOBILE */
-    @media (max-width: 680px) {
-      nav { padding: 0 20px; }
-      .nav-links { display: none; }
-      .hero-inner { padding: 0 20px; }
-      .hero-title { font-size: clamp(44px, 13vw, 80px); }
-      .day { grid-template-columns: 44px 1fr; gap: 0 20px; }
-      .day-n { font-size: 36px; }
-      .fmt-grid { grid-template-columns: 1fr; }
-      .inc-grid { grid-template-columns: 1fr; gap: 40px; }
-      .price-box { padding: 40px 24px; }
-      .price-num { font-size: 72px; }
-      .price-num sup { font-size: 32px; }
-    }
-    /* CAROUSEL */
-    .carousel-wrap {
-      position: relative;
-      overflow: hidden;
-      background: #000;
-    }
-    .carousel {
-      overflow: hidden;
-    }
-    .carousel-track {
-      display: flex;
-      transition: transform 0.45s ease;
-    }
-    .carousel-slide {
-      flex: 0 0 100%;
-    }
-    .carousel-slide img {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Inline day photo */
-    .day-inline-photo {
-      margin-top: 20px;
-      overflow: hidden;
-      border-radius: 2px;
-      max-width: 520px;
-    }
-    .day-inline-photo img {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      display: block;
-    }
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.85);
-      border: none;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      font-size: 18px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-      transition: background 0.2s;
-      z-index: 10;
-    }
-    .carousel-btn:hover { background: #fff; }
-    .carousel-prev { left: 20px; }
-    .carousel-next { right: 20px; }
-    .carousel-dots {
-      position: absolute;
-      bottom: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 7px;
-      z-index: 10;
-    }
-    .carousel-dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.5);
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .carousel-dot.active { background: #fff; }
-
-    /* COLLAGE */
-    .collage-wrap { background: var(--bg3); padding: 4px; }
-    .collage-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 240px 240px;
-      grid-auto-rows: 450px;
-      gap: 4px;
-    }
-    .collage-item {
-      overflow: hidden;
-      cursor: zoom-in;
-      background: var(--bg3);
-    }
-    .collage-item--portrait img {
-      object-position: center top;
-    }
-    .collage-item:first-child {
-      grid-column: 1 / 3;
-      grid-row: 1 / 3;
-    }
-    .collage-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-      display: block;
-    }
-    .collage-item:hover img { transform: scale(1.05); }
-
-    /* LIGHTBOX */
-    .lightbox {
-      display: none;
-      position: fixed; inset: 0; z-index: 1000;
-      background: rgba(0,0,0,0.94);
-      align-items: center;
-      justify-content: center;
-    }
-    .lightbox.open { display: flex; }
-    .lb-img-wrap {
-      max-width: 90vw;
-      max-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .lb-img-wrap img {
-      max-width: 90vw;
-      max-height: 88vh;
-      object-fit: contain;
-      display: block;
-      width: auto;
-    }
-    .lb-close {
-      position: absolute; top: 24px; right: 28px;
-      background: none; border: none;
-      color: rgba(255,255,255,0.7);
-      font-size: 22px; cursor: pointer;
-      line-height: 1; padding: 8px;
-    }
-    .lb-close:hover { color: #fff; }
-    .lb-prev, .lb-next {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.15);
-      color: #fff; font-size: 20px;
-      width: 48px; height: 48px;
-      border-radius: 50%; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
-    }
-    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.22); }
-    .lb-prev { left: 24px; }
-    .lb-next { right: 24px; }
-    .lb-counter {
-      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
-      font-size: 12px; color: rgba(255,255,255,0.45);
-      letter-spacing: 0.12em;
-    }
-    @media (max-width: 680px) {
-      .collage-grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 180px);
-      }
-      .collage-item:first-child { grid-column: 1 / 3; grid-row: 1 / 2; }
-    }
-
-    /* ORGANIZERS - see above */
-
-    /* BURGER */
-    .burger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-      z-index: 400;
-    }
-    .burger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: transform 0.3s, opacity 0.3s;
-    }
-    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .burger.open span:nth-child(2) { opacity: 0; }
-    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 62px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 150;
-      background: var(--bg);
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px 40px;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-family: var(--ff-serif);
-      font-size: 36px;
-      font-weight: 300;
-      color: var(--text);
-      text-align: center;
-      padding: 10px 0;
-      width: 100%;
-      display: block;
-      border-bottom: 1px solid var(--border);
-    }
-    .mobile-menu a:first-child { border-top: 1px solid var(--border); }
-    .mobile-menu a:hover { color: var(--accent); }
-    .mobile-menu .menu-cta {
-      margin-top: 32px;
-      font-family: var(--ff-sans);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: var(--text);
-      color: #faf8f5 !important;
-      padding: 16px 40px;
-      border-radius: 40px;
-      border: none;
-      width: auto;
-    }
-
-    @media (max-width: 680px) {
-      .burger { display: flex; }
-    }
-
-  </style>
+/* лайтбокс */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(14,30,38,.94);display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;color:var(--shell)}
+.lb-stage{flex:1;display:flex;align-items:center;justify-content:center;padding:0 64px 24px;min-height:0;touch-action:pan-y}
+.lb-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:8px}
+.lb .circ{background:rgba(251,248,243,.1);border-color:rgba(251,248,243,.2)}
+.lb .circ svg{stroke:var(--shell)}
+.lb-prev,.lb-next{position:absolute;top:50%;margin-top:-23px}
+.lb-prev{left:12px}.lb-next{right:12px}
+.lb .count{color:var(--shell)}
+@media (max-width:700px){.lb-stage{padding:0 8px 24px}.lb-prev,.lb-next{top:auto;bottom:18px}.lb-prev{left:calc(50% - 56px)}.lb-next{right:calc(50% - 56px)}.lb-stage{padding-bottom:84px}}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <span class="nav-logo"><a href="https://www.instagram.com/pov.markiz" target="_blank" style="color: var(--accent);">@pov.markiz</a></span>
-  <div class="nav-links">
-    <a href="#route">Маршрут</a>
-    <a href="#yacht">Яхта</a>
-    <a href="#why">Почему Турция</a>
-    <a href="#price">Цена</a>
-    <a class="nav-btn" href="https://t.me/xfufx" target="_blank">Забронировать</a>
-  </div>
-  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Меню">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#route" onclick="toggleMenu()">Маршрут</a>
-  <a href="#yacht" onclick="toggleMenu()">Яхта</a>
-  <a href="#captain" onclick="toggleMenu()">Организаторы</a>
-  <a href="#why" onclick="toggleMenu()">Почему Турция</a>
-  <a href="#price" onclick="toggleMenu()">Цена</a>
-  <a href="#book" onclick="toggleMenu()">Как попасть</a>
-  <a href="https://t.me/xfufx" target="_blank" class="menu-cta">Забронировать место</a>
-</div>
-
-<!-- HERO -->
-<header id="hero">
-  <div class="hero-img"></div>
-  <div class="hero-grad"></div>
-  <div class="hero-inner">
-    <p class="hero-label"><a href="https://www.instagram.com/pov.markiz" target="_blank">@pov.markiz</a> · Авторский тур</p>
-    <h1 class="hero-title">Яхтинг<br>в Турции</h1>
-    <div class="hero-details">
-      <span>26 сентября — 3 октября</span>
-      <span class="hero-details-sep">·</span>
-      <span>€1 350</span>
-      <span class="hero-details-sep">·</span>
-      <span>8 человек</span>
-    </div>
-    <a class="btn" href="https://t.me/xfufx" target="_blank">Забронировать место</a>
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top">The Crew</a>
+    <nav class="nav-links" aria-label="Разделы">
+      <a href="#route">Маршрут</a>
+      <a href="#yacht">Яхта</a>
+      <a href="#price">Стоимость</a>
+      <a href="#organizer">Организатор</a>
+      <a href="#book" class="cta">Записаться</a>
+    </nav>
   </div>
 </header>
 
-<!-- INTRO -->
-<section id="intro">
-  <p class="intro-eyebrow">О туре</p>
-  <div class="intro-body">
-    <p>
-      Турецкое побережье — это не просто пляж. Это <strong>бирюзовые лагуны</strong>, до которых можно добраться только на яхте, ликийские гробницы прямо над водой, дикие бухты без единого человека —
-      и вечера, которые хочется растянуть до утра.
-    </p>
-    <br>
-    <p>
-      Здесь особенные закаты — вода меняет цвет каждые десять минут,
-      а ночью над бухтой открывается такое <strong>звёздное небо</strong>, которое в городе просто не существует.
-      Жизнь на воде даёт ощущение свободы, которое сложно объяснить словами — это нужно просто прожить.
-    </p>
-    <br>
-    <p>
-      Мы собрали <strong>8 дней</strong>, в которых каждый день — новая бухта, новый вид.
-      Маленькая группа, своя яхта, никакого туристического расписания.
-    </p>
+<main id="top">
+<section class="hero">
+  <picture><source media="(max-width: 700px)" srcset="assets/img/hero-m-s.webp 800w, assets/img/hero-m.webp 1600w" sizes="100vw"><img class="hero-img" src="assets/img/hero-s.webp" srcset="assets/img/hero-s.webp 800w, assets/img/hero.webp 1600w" sizes="100vw" alt="Парусная яхта в бирюзовой бухте Ликийского берега" loading="eager" decoding="async"></picture>
+  <div class="wrap hero-in">
+    <p class="hero-kicker">Авторский тур The Crew</p>
+    <h1>Яхтинг в Турции</h1>
+    <p class="hero-sub">Неделя совсем другой жизни на яхте: бирюзовые бухты, древние руины, закаты на якоре. Научу держать штурвал и ставить паруса.</p>
+  </div>
+  <div class="wrap" style="padding:0;max-width:calc(var(--wrap) + 44px)">
+    <div class="facts">
+      <div class="facts-grid">
+        <div class="fact"><b>8–15 мая</b><span>2027 года</span></div>
+        <div class="fact"><b>8 дней</b><span>7 ночей на яхте</span></div>
+        <div class="fact"><b>до 7 участников</b><span>одна яхта</span></div>
+        <div class="fact"><b>1390 €</b><span>без перелёта</span></div>
+        <a class="btn" href="#book">Записаться</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="band" role="presentation"></div>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <h2>Каждый день новая бухта</h2>
+    <div>
+      <p>Ликийский берег лучше всего видно с воды. Бирюзовые лагуны, до которых не доехать по дороге, гробницы в скалах над морем и тихие бухты, где на ночь встают всего несколько яхт.</p>
+      <p>За восемь дней пройдём от Фетхие до Каша и обратно: острова с руинами, лагуна Олюдениза, золотой пляж Патара, Голубая пещера и Долина бабочек. Купаемся прямо с борта, ужинаем в бухтах, засыпаем под звёздами. Опыт не нужен: яхту веду я, вы просто отдыхаете.</p>
+    </div>
   </div>
 </section>
 
-<!-- PHOTO COLLAGE -->
-<div class="collage-wrap">
-  <div class="collage-grid" id="collageGrid">
-    <div class="collage-item" onclick="openLightbox(0)"><img src="photos/gallery-turkey-1.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(1)"><img src="photos/gallery-turkey-2.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(2)"><img src="photos/gallery-turkey-3.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(3)"><img src="photos/gallery-turkey-4.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(4)"><img src="photos/gallery-turkey-5.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(5)"><img src="photos/gallery-turkey-6.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(6)"><img src="photos/gallery-turkey-7.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(7)"><img src="photos/gallery-turkey-8.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(8)"><img src="photos/gallery-turkey-9.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item collage-item--portrait" onclick="openLightbox(9)"><img src="photos/gallery-turkey-10.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item collage-item--portrait" onclick="openLightbox(10)"><img src="photos/gallery-turkey-11.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item collage-item--portrait" onclick="openLightbox(11)"><img src="photos/gallery-turkey-12.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item collage-item--portrait" onclick="openLightbox(12)"><img src="photos/gallery-turkey-13.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(13)"><img src="photos/gallery-turkey-14.jpg" alt="Турция" loading="lazy" /></div>
-    <div class="collage-item" onclick="openLightbox(14)"><img src="photos/gallery-turkey-15.jpg" alt="Турция" loading="lazy" /></div>
-
-  </div>
-</div>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lb-close" onclick="closeLightbox()">✕</button>
-  <button class="lb-prev" onclick="event.stopPropagation(); lbMove(-1)">&#8592;</button>
-  <button class="lb-next" onclick="event.stopPropagation(); lbMove(1)">&#8594;</button>
-  <div class="lb-img-wrap">
-    <img id="lbImg" src="" alt="" />
-  </div>
-  <div class="lb-counter" id="lbCounter"></div>
-</div>
-
-<!-- ROUTE -->
-<section id="route">
+<section class="sec" aria-label="Фотографии">
   <div class="wrap">
-    <p class="sec-eye">Маршрут</p>
-    <h2 class="sec-title">Восемь дней<br>вдоль Ликийского берега</h2>
-
-    <div class="day">
-      <div class="day-n">01</div>
-      <div>
-        <div class="day-date">26 сентября</div>
-        <h3 class="day-h">Фетхие — заселение на яхту</h3>
-        <p class="day-p">Встреча в марине, знакомство с командой, закупка продуктов и первый совместный ужин. Ночь в домашней марине под звёздами.</p>
-        <div class="day-inline-photo">
-          <!-- <img src="photos/day1-fethiye-marina.jpg" alt="Марина Фетхие" loading="lazy" /> -->
-        </div>
-      </div>
+    <div class="gal" id="gal">
+<button class="g-item g-1" data-lb="gallery" data-i="0" aria-label="Открыть фото: Обед всей командой на палубе"><img class="" src="assets/img/g1-s.webp" srcset="assets/img/g1-s.webp 800w, assets/img/g1.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="Обед всей командой на палубе" loading="lazy" decoding="async"></button>
+<button class="g-item g-2" data-lb="gallery" data-i="1" aria-label="Открыть фото: Учимся держать штурвал"><img class="" src="assets/img/g32-s.webp" srcset="assets/img/g32-s.webp 800w, assets/img/g32.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="Учимся держать штурвал" loading="lazy" decoding="async"></button>
+<button class="g-item g-3" data-lb="gallery" data-i="2" aria-label="Открыть фото: Прыжок в море с кормы"><img class="" src="assets/img/g13-s.webp" srcset="assets/img/g13-s.webp 800w, assets/img/g13.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="Прыжок в море с кормы" loading="lazy" decoding="async"></button>
+<button class="g-item g-4" data-lb="gallery" data-i="3" aria-label="Открыть фото: На носу яхты в открытом море"><img class="" src="assets/img/g3-s.webp" srcset="assets/img/g3-s.webp 800w, assets/img/g3.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="На носу яхты в открытом море" loading="lazy" decoding="async"></button>
+<button class="g-item g-5" data-lb="gallery" data-i="4" aria-label="Открыть фото: Утро на палубе"><img class="" src="assets/img/g12-s.webp" srcset="assets/img/g12-s.webp 800w, assets/img/g12.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="Утро на палубе" loading="lazy" decoding="async"></button>
+<button class="g-item g-6" data-lb="gallery" data-i="5" aria-label="Открыть фото: Завтрак на борту"><img class="" src="assets/img/g10-s.webp" srcset="assets/img/g10-s.webp 800w, assets/img/g10.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="Завтрак на борту" loading="lazy" decoding="async"></button>
+<button class="g-item g-7" data-lb="gallery" data-i="6" aria-label="Открыть фото: Рассвет на якоре"><img class="" src="assets/img/g15-s.webp" srcset="assets/img/g15-s.webp 800w, assets/img/g15.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="Рассвет на якоре" loading="lazy" decoding="async"></button>
+<button class="g-item g-8" data-lb="gallery" data-i="7" aria-label="Открыть фото: Под парусом вдоль берега"><img class="" src="assets/img/g6-s.webp" srcset="assets/img/g6-s.webp 800w, assets/img/g6.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="Под парусом вдоль берега" loading="lazy" decoding="async"></button>
+<button class="g-item g-9" data-lb="gallery" data-i="8" aria-label="Открыть фото: Яхты в марине Фетхие"><img class="" src="assets/img/g9-s.webp" srcset="assets/img/g9-s.webp 800w, assets/img/g9.webp 1600w" sizes="(min-width: 900px) 33vw, 86vw" alt="Яхты в марине Фетхие" loading="lazy" decoding="async"></button>
     </div>
-
-    <div class="day">
-      <div class="day-n">02</div>
-      <div>
-        <div class="day-date">27 сентября</div>
-        <h3 class="day-h">Острова Терсане и Домуз</h3>
-        <p class="day-p">Исследуем <strong>древние руины</strong>, купаемся в бирюзовых лагунах среди затонувших городов. Ужинаем в известном ресторане в Сарсале, ночуем в тихой бухте.</p>
-        <div class="day-inline-photo">
-          <!-- <img src="photos/day2-tersane-island.jpg" alt="Острова Терсане" loading="lazy" /> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-n">03</div>
-      <div>
-        <div class="day-date">28 сентября</div>
-        <h3 class="day-h">Остров Гемилер</h3>
-        <p class="day-p">Стоянка на якоре возле необитаемого острова Гемилер. Подъём к самой верхушке острова, маяк и <strong>невероятный закат</strong>, который с каждым разом всё красивее. Ужинаем на яхте. Ночёвка на якоре.</p>
-        <div class="day-inline-photo">
-          <!-- <img src="photos/day3-gemiler-island.jpg" alt="Остров Гемилер" loading="lazy" /> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="day day--photo">
-      <div class="day-n">04</div>
-      <div>
-        <div class="day-date">29 сентября</div>
-        <h3 class="day-h">Олюдениз — полёт на парапланах</h3>
-        <p class="day-p">Полёт на парапланах по желанию. В обед переход до <strong>пляжа Патара</strong> — 12 км золотого песка и кристально чистая вода с видом на величественные скалы. Ощущение, что ты на краю света. Ночуем в бухте на якоре.</p>
-        <div class="day-inline-photo">
-          <!-- <img src="photos/oludeniz-blue-lagoon-wide.jpg" alt="Олюдениз" loading="lazy" /> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="day day--photo">
-      <div class="day-n">05</div>
-      <div>
-        <div class="day-date">30 сентября</div>
-        <h3 class="day-h">Каш — вечерний город</h3>
-        <p class="day-p">С пляжа отправляемся в Каш, встаём в марину и гуляем по вечернему городу — атмосферу которого нереально передать словами. Необычные бары и ужин в ресторане.</p>
-        <div class="day-inline-photo">
-          <!-- <img src="photos/kas-coast-turquoise.jpg" alt="Каш" loading="lazy" /> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-n">06</div>
-      <div>
-        <div class="day-date">1 октября</div>
-        <h3 class="day-h">Голубая пещера и полуостров</h3>
-        <p class="day-p">Просыпаемся в марине и едем до <strong>Голубой пещеры</strong> на тузике. Потом — полуостров рядом с Кашем: заброшенный отель на крайней точке, пляжи, тишина. Вечером ужин, ночью — переход до Долины бабочек.</p>
-        <div class="day-inline-photo">
-          <!-- <img src="photos/day6-blue-cave.jpg" alt="Голубая пещера" loading="lazy" /> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-n">07</div>
-      <div>
-        <div class="day-date">2 октября</div>
-        <h3 class="day-h">Долина бабочек — поход к водопаду</h3>
-        <p class="day-p">Поход к водопаду, купание в природных бассейнах. Переход к Фетхие в домашнюю марину — финальный совместный ужин.</p>
-        <div class="day-inline-photo">
-          <!-- <img src="photos/day7-butterfly-valley.jpg" alt="Долина бабочек" loading="lazy" /> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-n">08</div>
-      <div>
-        <div class="day-date">3 октября</div>
-        <h3 class="day-h">Выселение и дорога домой</h3>
-        <p class="day-p">Раннее выселение с яхты и трансфер в аэропорт.</p>
-        <div class="day-inline-photo">
-        <!--   <img src="photos/day8-fethiye-marina.jpg" alt="Олюдениз" loading="lazy" /> -->
-        </div>
+    <div class="car-ctl">
+      <span class="count" id="gal-count">1 / 9</span>
+      <div class="car-btns">
+        <button class="circ" data-scroll="gal" data-dir="-1" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="circ" data-scroll="gal" data-dir="1" aria-label="Следующее фото"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- YACHT CAROUSEL -->
-
-<section id="yacht">
+<section class="sec why" id="why">
   <div class="wrap">
-    <p class="sec-eye">Формат</p>
-    <h2 class="sec-title">Как мы живём<br>на яхте</h2>
-
-    <div class="carousel-wrap" style="margin-bottom: 1px;">
-      <div class="carousel" id="yachtCarousel">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide"><img src="photos/yacht1.webp" alt="Яхта на закате" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht2.webp" alt="Яхта в море" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht3.webp" alt="Каюта на яхте" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht4.webp" alt="Кокпит яхты" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht5.webp" alt="Кокпит яхты" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht6.webp" alt="Кокпит яхты" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht7.webp" alt="Кокпит яхты" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht8.webp" alt="Кокпит яхты" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht9.webp" alt="Кокпит яхты" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht10.webp" alt="Кокпит яхты" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="photos/yacht11.webp" alt="Кокпит яхты" loading="lazy" /></div>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-prev" onclick="carouselMove(-1)" aria-label="Назад">&#8592;</button>
-      <button class="carousel-btn carousel-next" onclick="carouselMove(1)" aria-label="Вперёд">&#8594;</button>
-      <div class="carousel-dots" id="carouselDots"></div>
+    <div class="sec-head">
+      <h2>Почему Турция</h2>
+      <p>Одно из лучших мест для первой яхты: мягкие ветра, короткие переходы и бирюзовая вода в каждой бухте.</p>
     </div>
-
-    <div class="fmt-grid">
-      <div class="fmt-card">
-        <div class="fmt-card-body">
-          <div class="fmt-icon">⚓</div>
-          <div class="fmt-title">Современная яхта</div>
-          <p class="fmt-text">Комфортабельная яхта с просторными каютами по двое. Всё необходимое на борту — кухня, душ, навигация.</p>
-        </div>
-      </div>
-      <div class="fmt-card">
-        <div class="fmt-card-body">
-        <div class="fmt-icon">🍽</div>
-        <div class="fmt-title">Питание</div>
-        <p class="fmt-text">Завтраки и обеды на борту. Ужины — в уютных ресторанах прямо в бухтах. Готовим вместе, едим с видом на море.</p>
-        </div>
-      </div>
-      <div class="fmt-card">
-        <div class="fmt-card-body">
-        <div class="fmt-icon">🧭</div>
-        <div class="fmt-title">Маршрут</div>
-        <p class="fmt-text">Маршрут — ориентировочный. Мы живём по погоде, ветру и настроению. Именно так, по-моему мнению, и должна выглядеть настоящая экспедиция — не по рельсам, а навстречу неизвестному.</p>
-        </div>
-      </div>
-      <div class="fmt-card">
-        <div class="fmt-card-body">
-        <div class="fmt-icon">🌊</div>
-        <div class="fmt-title">Темп</div>
-        <p class="fmt-text">Спокойный ритм: купание, яхтинг, закаты. Каждый день — новая бухта. Подходит новичкам.</p>
-        </div>
-      </div>
+    <div class="why-grid" id="whyg">
+<article class="why-card">
+  <div class="why-ph"><img class="" src="assets/img/w1-s.webp" srcset="assets/img/w1-s.webp 800w, assets/img/w1.webp 1600w" sizes="(min-width: 900px) 25vw, 78vw" alt="Бирюзовые бухты" loading="lazy" decoding="async"></div>
+  <h3>Бирюзовые бухты</h3>
+  <p>Вода такого цвета, что кажется подсвеченной снизу. До многих бухт не доехать по суше, к ним можно только прийти на яхте.</p>
+</article>
+<article class="why-card">
+  <div class="why-ph"><img class="" src="assets/img/w2-s.webp" srcset="assets/img/w2-s.webp 800w, assets/img/w2.webp 1600w" sizes="(min-width: 900px) 25vw, 78vw" alt="Своя яхта" loading="lazy" decoding="async"></div>
+  <h3>Своя яхта</h3>
+  <p>Никаких отелей и автобусов. Где понравилось, там и встаём на якорь.</p>
+</article>
+<article class="why-card">
+  <div class="why-ph"><img class="" src="assets/img/w3-s.webp" srcset="assets/img/w3-s.webp 800w, assets/img/w3.webp 1600w" sizes="(min-width: 900px) 25vw, 78vw" alt="История под ногами" loading="lazy" decoding="async"></div>
+  <h3>История под ногами</h3>
+  <p>Руины на Терсане, византийские церкви на Гемилере, ликийские гробницы в скалах. Древность видна прямо с палубы.</p>
+</article>
+<article class="why-card">
+  <div class="why-ph"><img class="" src="assets/img/w4-s.webp" srcset="assets/img/w4-s.webp 800w, assets/img/w4.webp 1600w" sizes="(min-width: 900px) 25vw, 78vw" alt="Ночи на якоре" loading="lazy" decoding="async"></div>
+  <h3>Ночи на якоре</h3>
+  <p>Тишина, вода вокруг и звёзды, которых не видно в городе. Утром прыгаем в море прямо с борта.</p>
+</article>
+<article class="why-card">
+  <div class="why-ph"><img class="" src="assets/img/w5-s.webp" srcset="assets/img/w5-s.webp 800w, assets/img/w5.webp 1600w" sizes="(min-width: 900px) 25vw, 78vw" alt="Каш" loading="lazy" decoding="async"></div>
+  <h3>Каш</h3>
+  <p>Белые домики, бугенвиллеи и маленькие бары. Городок у моря, который пока сохраняет камерную атмосферу.</p>
+</article>
+<article class="why-card">
+  <div class="why-ph"><img class="" src="assets/img/w6-s.webp" srcset="assets/img/w6-s.webp 800w, assets/img/w6.webp 1600w" sizes="(min-width: 900px) 25vw, 78vw" alt="Жизнь на палубе" loading="lazy" decoding="async"></div>
+  <h3>Жизнь на палубе</h3>
+  <p>Кофе на рассвете, книга на солнце, прыжки в воду с кормы. Никуда не нужно спешить.</p>
+</article>
+<article class="why-card">
+  <div class="why-ph"><img class="" src="assets/img/w7-s.webp" srcset="assets/img/w7-s.webp 800w, assets/img/w7.webp 1600w" sizes="(min-width: 900px) 25vw, 78vw" alt="Маленькая команда" loading="lazy" decoding="async"></div>
+  <h3>Маленькая команда</h3>
+  <p>До 7 человек на одной яхте. За неделю становимся друзьями, а не попутчиками.</p>
+</article>
+<article class="why-card">
+  <div class="why-ph"><img class="" src="assets/img/w8-s.webp" srcset="assets/img/w8-s.webp 800w, assets/img/w8.webp 1600w" sizes="(min-width: 900px) 25vw, 78vw" alt="Ужины в бухтах" loading="lazy" decoding="async"></div>
+  <h3>Ужины в бухтах</h3>
+  <p>Свежая рыба, мезе и турецкая кухня в ресторанах на берегу, куда приходят прямо с яхт.</p>
+</article>
     </div>
-
-  </div>
-</section>
-
-<!-- CAPTAIN -->
-<section id="captain">
-  <div class="captain-inner">
-    <p class="sec-eye" style="text-align:center;">Капитан</p>
-    <div class="organizers-grid">
-      <div class="organizer">
-        <div class="captain-photo">
-          <img src="photos/captain-portrait.JPG" alt="Марк" />
-        </div>
-        <div class="captain-name">Марк</div>
-        <div class="captain-role">Капитан · Организатор</div>
-        <p class="captain-text">
-          Сертифицированный яхтенный капитан и автор блога <a href="https://www.instagram.com/pov.markiz" target="_blank" style="color: var(--accent);">@pov.markiz</a>. Уже несколько лет вожу небольшие группы в путешествия — по Турции, Канарам, Мадейре, Японии, Африке и дальше. Для меня это не работа, а способ показать людям мир так, как я вижу его сам.
-        </p>
+    <div class="car-ctl car-mob">
+      <span class="count" id="whyg-count">1 / 8</span>
+      <div class="car-btns">
+        <button class="circ" data-scroll="whyg" data-dir="-1" aria-label="Предыдущая карточка"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="circ" data-scroll="whyg" data-dir="1" aria-label="Следующая карточка"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
     </div>
   </div>
 </section>
+<div class="band" role="presentation"></div>
 
+<section class="sec" id="route" style="padding-bottom:84px">
+  <div class="wrap route-top">
+    <h2>Маршрут на 8 дней</h2>
+    <div class="car-ctl">
+      <div class="car-btns">
+        <button class="circ" data-scroll="days" data-dir="-1" aria-label="Предыдущий день"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="circ" data-scroll="days" data-dir="1" aria-label="Следующий день"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="days" id="days">
+<article class="day" id="day-1">
+  <div class="day-ph"><img class="" src="assets/img/d1-s.webp" srcset="assets/img/d1-s.webp 800w, assets/img/d1.webp 1600w" sizes="(min-width: 900px) 380px, 82vw" alt="Яхты у причала под розовым закатом" loading="lazy" decoding="async">
+    <span class="day-villa">Фетхие</span></div>
+  <div class="day-body">
+    <div class="day-head"><span class="day-n">1</span><span class="day-date">сб, 8 мая</span></div>
+    <h3>Заселение на яхту</h3>
+    <p>Встречаемся в марине Фетхие, знакомимся с яхтой, заселяемся в каюты и вместе закупаем продукты на неделю. Первый общий ужин и ночь в марине.</p>
+    <p class="day-high"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.2 5.6 6 .4-4.6 3.9 1.5 5.9L10 14l-5.1 3.3 1.5-5.9L1.8 7.5l6-.4z"/></svg><span><b>Главное дня.</b> Первый вечер всей командой на палубе.</span></p>
+  </div>
+</article>
+<article class="day" id="day-2">
+  <div class="day-ph"><img class="" src="assets/img/d2-s.webp" srcset="assets/img/d2-s.webp 800w, assets/img/d2.webp 1600w" sizes="(min-width: 900px) 380px, 82vw" alt="Купание у скал в бухте острова Терсане" loading="lazy" decoding="async">
+    <span class="day-villa">Терсане</span></div>
+  <div class="day-body">
+    <div class="day-head"><span class="day-n">2</span><span class="day-date">вс, 9 мая</span></div>
+    <h3>Острова Терсане и Домуз</h3>
+    <p>Выходим в море. Исследуем древние руины на Терсане и купаемся в бирюзовых лагунах среди островов. Вечером ужинаем в известном ресторане в бухте Сарсала.</p>
+    <p class="day-high"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.2 5.6 6 .4-4.6 3.9 1.5 5.9L10 14l-5.1 3.3 1.5-5.9L1.8 7.5l6-.4z"/></svg><span><b>Главное дня.</b> Купание в лагуне среди древних руин.</span></p>
+  </div>
+</article>
+<article class="day" id="day-3">
+  <div class="day-ph"><img class="" src="assets/img/d3-s.webp" srcset="assets/img/d3-s.webp 800w, assets/img/d3.webp 1600w" sizes="(min-width: 900px) 380px, 82vw" alt="Закат на вершине острова Гемилер" loading="lazy" decoding="async">
+    <span class="day-villa">Гемилер</span></div>
+  <div class="day-body">
+    <div class="day-head"><span class="day-n">3</span><span class="day-date">пн, 10 мая</span></div>
+    <h3>Остров Гемилер</h3>
+    <p>Встаём на якорь у необитаемого острова Гемилер. Поднимаемся на самую вершину мимо старых руин и встречаем закат, который с каждым разом всё красивее. Ужинаем на яхте и ночуем в бухте.</p>
+    <p class="day-high"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.2 5.6 6 .4-4.6 3.9 1.5 5.9L10 14l-5.1 3.3 1.5-5.9L1.8 7.5l6-.4z"/></svg><span><b>Главное дня.</b> Закат с вершины Гемилера.</span></p>
+  </div>
+</article>
+<article class="day" id="day-4">
+  <div class="day-ph"><img class="" src="assets/img/d4-s.webp" srcset="assets/img/d4-s.webp 800w, assets/img/d4.webp 1600w" sizes="(min-width: 900px) 380px, 82vw" alt="Лагуна Олюдениз и парапланы над ней" loading="lazy" decoding="async">
+    <span class="day-villa">Олюдениз</span></div>
+  <div class="day-body">
+    <div class="day-head"><span class="day-n">4</span><span class="day-date">вт, 11 мая</span></div>
+    <h3>Олюдениз и Патара</h3>
+    <p>Утром по желанию летим на параплане над лагуной Олюдениза, одним из самых известных мест для полётов в мире. Днём переходим к Патаре: километры золотого песка, прозрачная вода и скалы вокруг. Ночуем на якоре.</p>
+    <p class="day-high"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.2 5.6 6 .4-4.6 3.9 1.5 5.9L10 14l-5.1 3.3 1.5-5.9L1.8 7.5l6-.4z"/></svg><span><b>Главное дня.</b> Полёт над лагуной Олюдениза.</span></p>
+  </div>
+</article>
+<article class="day" id="day-5">
+  <div class="day-ph"><img class="" src="assets/img/d5-s.webp" srcset="assets/img/d5-s.webp 800w, assets/img/d5.webp 1600w" sizes="(min-width: 900px) 380px, 82vw" alt="Улица старого Каша с бугенвиллеей и ликийской гробницей" loading="lazy" decoding="async">
+    <span class="day-villa">Каш</span></div>
+  <div class="day-body">
+    <div class="day-head"><span class="day-n">5</span><span class="day-date">ср, 12 мая</span></div>
+    <h3>Вечерний Каш</h3>
+    <p>Переходим в Каш и встаём в марину. Гуляем по узким улицам с бугенвиллеями, заходим в необычные бары и ужинаем в ресторане.</p>
+    <p class="day-high"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.2 5.6 6 .4-4.6 3.9 1.5 5.9L10 14l-5.1 3.3 1.5-5.9L1.8 7.5l6-.4z"/></svg><span><b>Главное дня.</b> Атмосфера вечернего Каша, которую сложно передать словами.</span></p>
+  </div>
+</article>
+<article class="day" id="day-6">
+  <div class="day-ph"><img class="" src="assets/img/d6-s.webp" srcset="assets/img/d6-s.webp 800w, assets/img/d6.webp 1600w" sizes="(min-width: 900px) 380px, 82vw" alt="Голубая пещера, вход с моря" loading="lazy" decoding="async">
+    <span class="day-villa">Каш</span></div>
+  <div class="day-body">
+    <div class="day-head"><span class="day-n">6</span><span class="day-date">чт, 13 мая</span></div>
+    <h3>Голубая пещера</h3>
+    <p>Утром на тузике идём к Голубой пещере. Потом исследуем полуостров рядом с Кашем: заброшенный отель на краю мыса, пустые пляжи и тишина. После ужина ночной переход к Долине бабочек.</p>
+    <p class="day-high"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.2 5.6 6 .4-4.6 3.9 1.5 5.9L10 14l-5.1 3.3 1.5-5.9L1.8 7.5l6-.4z"/></svg><span><b>Главное дня.</b> Голубая вода внутри пещеры.</span></p>
+  </div>
+</article>
+<article class="day" id="day-7">
+  <div class="day-ph"><img class="" src="assets/img/d7-s.webp" srcset="assets/img/d7-s.webp 800w, assets/img/d7.webp 1600w" sizes="(min-width: 900px) 380px, 82vw" alt="Долина бабочек сверху" loading="lazy" decoding="async">
+    <span class="day-villa">Долина бабочек</span></div>
+  <div class="day-body">
+    <div class="day-head"><span class="day-n">7</span><span class="day-date">пт, 14 мая</span></div>
+    <h3>Долина бабочек</h3>
+    <p>Высаживаемся в Долине бабочек, идём к водопаду и купаемся в природных бассейнах. Потом возвращаемся в марину Фетхие на прощальный ужин.</p>
+    <p class="day-high"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.2 5.6 6 .4-4.6 3.9 1.5 5.9L10 14l-5.1 3.3 1.5-5.9L1.8 7.5l6-.4z"/></svg><span><b>Главное дня.</b> Поход к водопаду в ущелье.</span></p>
+  </div>
+</article>
+<article class="day" id="day-8">
+  <div class="day-ph"><img class="" src="assets/img/d8-s.webp" srcset="assets/img/d8-s.webp 800w, assets/img/d8.webp 1600w" sizes="(min-width: 900px) 380px, 82vw" alt="Команда на носу яхты" loading="lazy" decoding="async">
+    <span class="day-villa">Фетхие</span></div>
+  <div class="day-body">
+    <div class="day-head"><span class="day-n">8</span><span class="day-date">сб, 15 мая</span></div>
+    <h3>До встречи, Турция</h3>
+    <p>Раннее выселение с яхты и дорога в аэропорт.</p>
+    
+  </div>
+</article>
+  </div>
+  <div class="route-dots" id="days-dots" aria-hidden="true"></div>
+  <div class="wrap"><p class="route-note">Маршрут — ориентировочный. Мы живём по погоде, ветру и настроению. Именно так, по моему мнению, и должна выглядеть настоящая экспедиция — не по рельсам, а навстречу неизвестному.</p></div>
+</section>
 
-<section id="why">
+<section class="sec stay" id="yacht">
   <div class="wrap">
-    <p class="sec-eye">Почему Турция</p>
-    <h2 class="sec-title">Идеальное место<br>для первой яхты</h2>
-
-    <ul class="why-list">
-      <li class="why-li"><div class="why-dot"></div><span class="why-t"><strong>Бирюзовые бухты</strong> — вода, которую хочется снимать каждую минуту</span></li>
-      <li class="why-li"><div class="why-dot"></div><span class="why-t"><strong>Лёгкие ветра в июне</strong> — идеально для тех, кто на яхте впервые</span></li>
-      <li class="why-li"><div class="why-dot"></div><span class="why-t"><strong>Ликийские пейзажи</strong> — горы, руины и море в одном кадре</span></li>
-      <li class="why-li"><div class="why-dot"></div><span class="why-t"><strong>Парапланы над Олюденизом</strong> — одно из самых фотогеничных мест мира</span></li>
-      <li class="why-li"><div class="why-dot"></div><span class="why-t"><strong>Каш — европейский город у моря</strong>, который пока ещё сохраняет камерную атмосферу. Надо успеть, пока он не стал другим</span></li>
-      <li class="why-li"><div class="why-dot"></div><span class="why-t"><strong>Группа до 8 человек</strong> — не тур, а поездка с хорошей компанией</span></li>
-    </ul>
+    <div class="yacht-grid">
+      <div class="villa-txt">
+        <h2>Наш дом на неделю</h2>
+        <p style="margin-top:18px">Живём на парусной яхте: каюты по двое, кухня, душ и большая палуба, с которой прыгаем в воду. Утром просыпаемся в одной бухте, вечером встаём в другой.</p>
+        <div class="villa-tags"><span>каюты по двое</span><span>кухня и душ на борту</span><span>палуба для загара</span><span>тузик для высадок</span></div>
+        <p class="yacht-note">Модель яхты может поменяться, уровень комфорта останется таким же.</p>
+      </div>
+<div class="yg-wrap">
+<div class="vg" id="yg" data-count="9"><button class="vg-item" data-lb="yacht" data-i="0" aria-label="Фото Яхта, 1 из 9"><img class="" src="assets/img/y1-s.webp" srcset="assets/img/y1-s.webp 800w, assets/img/y1.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 1" loading="lazy" decoding="async"></button><button class="vg-item" data-lb="yacht" data-i="1" aria-label="Фото Яхта, 2 из 9"><img class="" src="assets/img/y2-s.webp" srcset="assets/img/y2-s.webp 800w, assets/img/y2.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 2" loading="lazy" decoding="async"></button><button class="vg-item" data-lb="yacht" data-i="2" aria-label="Фото Яхта, 3 из 9"><img class="" src="assets/img/y4-s.webp" srcset="assets/img/y4-s.webp 800w, assets/img/y4.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 3" loading="lazy" decoding="async"></button><button class="vg-item" data-lb="yacht" data-i="3" aria-label="Фото Яхта, 4 из 9"><img class="" src="assets/img/y5-s.webp" srcset="assets/img/y5-s.webp 800w, assets/img/y5.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 4" loading="lazy" decoding="async"></button><button class="vg-item" data-lb="yacht" data-i="4" aria-label="Фото Яхта, 5 из 9"><img class="" src="assets/img/y6-s.webp" srcset="assets/img/y6-s.webp 800w, assets/img/y6.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 5" loading="lazy" decoding="async"></button><button class="vg-item" data-lb="yacht" data-i="5" aria-label="Фото Яхта, 6 из 9"><img class="" src="assets/img/y7-s.webp" srcset="assets/img/y7-s.webp 800w, assets/img/y7.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 6" loading="lazy" decoding="async"></button><button class="vg-item" data-lb="yacht" data-i="6" aria-label="Фото Яхта, 7 из 9"><img class="" src="assets/img/y8-s.webp" srcset="assets/img/y8-s.webp 800w, assets/img/y8.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 7" loading="lazy" decoding="async"></button><button class="vg-item" data-lb="yacht" data-i="7" aria-label="Фото Яхта, 8 из 9"><img class="" src="assets/img/y9-s.webp" srcset="assets/img/y9-s.webp 800w, assets/img/y9.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 8" loading="lazy" decoding="async"></button><button class="vg-item" data-lb="yacht" data-i="8" aria-label="Фото Яхта, 9 из 9"><img class="" src="assets/img/y11-s.webp" srcset="assets/img/y11-s.webp 800w, assets/img/y11.webp 1600w" sizes="(min-width: 900px) 30vw, 82vw" alt="Яхта, фото 9" loading="lazy" decoding="async"></button></div>
+        <div class="car-ctl yg-ctl">
+          <span class="count" id="yg-count">1 / 9</span>
+          <div class="car-btns">
+            <button class="circ" data-scroll="yg" data-dir="-1" aria-label="Предыдущее фото яхты"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button class="circ" data-scroll="yg" data-dir="1" aria-label="Следующее фото яхты"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info-i"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="5"/><path d="M16 3v2.5M16 20.5V23M6 13h2.5M23.5 13H26M8.9 5.9l1.8 1.8M21.3 18.3l1.8 1.8M8.9 20.1l1.8-1.8M21.3 7.7l1.8-1.8M4 27c3-2 5-2 8 0s5 2 8 0 5-2 8 0"/></svg><h3>Погода в мае</h3><p>Днём около +26, вода +21…23, ветра мягкие. Комфортно даже тем, кто на яхте впервые.</p></div>
+      <div class="info-i"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 4v10a3 3 0 0 0 3 3v11M15 4v10a3 3 0 0 1-3 3M12 4v8M22 28V4c-3 2-4 6-4 11h4"/></svg><h3>Питание</h3><p>Завтраки и обеды готовим вместе на борту, ужинаем в ресторанах в бухтах и городах.</p></div>
+      <div class="info-i"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 11a2 2 0 0 1 2-2h4l2-3h8l2 3h4a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="16" cy="17" r="5"/></svg><h3>Контент</h3><p>Снимаю на дрон, камеру Fujifilm и телефон. Фото и видео из поездки получают все участники.</p></div>
+      <div class="info-i"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l10 4v7c0 6.5-4.3 11-10 13-5.7-2-10-6.5-10-13V8z"/><path d="M11.5 16l3.2 3.2 6-6.4"/></svg><h3>Безопасность</h3><p>Сертифицированный капитан, спасжилеты на всех и короткие переходы вдоль берега.</p></div>
+    </div>
   </div>
 </section>
 
-<!-- PRICE + INCLUDES -->
-<section id="price" style="background: var(--bg2);">
+
+<section class="sec price" id="price">
   <div class="wrap">
-    <p class="sec-eye">Стоимость</p>
-    <h2 class="sec-title">Цена тура</h2>
-
-    <div class="price-box" style="margin-bottom: 56px;">
-      <div class="price-num"><sup>€</sup>1 350</div>
-      <p class="price-note">за участника · без перелёта</p>
-      <p class="price-meta">26 сентября — 3 октября · 8 дней · 8 мест</p>
+    <div class="price-top">
+      <div class="price-num">1390 €</div>
+      <div class="price-meta"><span class="pill">8–15 мая 2027</span><span class="pill">8 дней</span><span class="pill">до 7 участников</span></div>
+      <p class="price-sub">Стоимость участия за одного человека, без перелёта.</p>
     </div>
-
-    <div class="inc-grid">
-      <div>
-        <p class="inc-h">Включено в стоимость</p>
-        <ul class="inc-list">
+    <div class="inc">
+      <div class="inc-box yes">
+        <h3>Включено</h3>
+        <ul>
           <li>Аренда яхты</li>
           <li>Проживание в каютах</li>
           <li>Капитан</li>
-          <li>Полная организация маршрута</li>
-          <li>Поддержка по подготовке: билеты, страховка, вещи</li>
-          <li>Фото и видео контент</li>
+          <li>Организация маршрута</li>
+          <li>Помощь с подготовкой: билеты, вещи, страховка</li>
+          <li>Фото и видео из поездки</li>
         </ul>
       </div>
-      <div>
-        <p class="inc-h">Не входит — <strong style="color:var(--text); font-size:12px;">~400 € без перелёта</strong></p>
-        <ul class="inc-list not-inc">
-          <li>Перелёт</li>
+      <div class="inc-box no">
+        <h3 class="inc-h">Не включено <span>~400 € без авиабилетов</span></h3>
+        <ul>
+          <li>Авиабилеты</li>
           <li>Питание</li>
-          <li>Стоянки и топливо</li>
-          <li>Парапланы и экскурсии</li>
-          <li>Трансфер аэропорт ↔ яхта</li>
+          <li>Стоянки в маринах и топливо</li>
+          <li>Трансфер из аэропорта</li>
           <li>Страховка</li>
+          <li>Параплан в Олюденизе <span>по желанию</span></li>
         </ul>
       </div>
     </div>
-
-    <div class="pay-note">
-      <strong>Оплата:</strong> предоплата 50% бронирует место. Остаток — за четыре недели до поездки.<br>
-      <span style="font-size:13px; color:var(--text-muted);">Отмена: стоимость возвращается, если найдём замену.</span>
+    <div class="terms">
+      <div class="term"><h3>Размещение</h3><p>В каютах по двое. Все живём на одной яхте.</p></div>
+      <div class="term"><h3>Оплата</h3><p>Предоплата 50% бронирует место. Остаток за месяц до поездки, до 8 апреля 2027.</p></div>
+      <div class="term"><h3>Отмена</h3><p>Деньги возвращаются, если на ваше место найдётся замена.</p></div>
     </div>
   </div>
 </section>
 
-<!-- HOW TO BOOK -->
-<section id="book">
-  <div class="wrap" style="text-align:center;">
-    <p class="sec-eye">Как попасть</p>
-    <h2 class="sec-title">Напиши мне<br>в Telegram</h2>
-
-    <ul class="steps" style="text-align:left;">
-      <li class="step">
-        <div class="step-n">01</div>
-        <div class="step-t"><strong>Напиши Марку в Telegram</strong> — расскажу всё, что нужно знать перед поездкой</div>
-      </li>
-      <li class="step">
-        <div class="step-n">02</div>
-        <div class="step-t">Обсудим детали, отвечу на все вопросы</div>
-      </li>
-      <li class="step">
-        <div class="step-n">03</div>
-        <div class="step-t"><strong>Звонок-знакомство</strong> — перед бронированием проводим небольшую встречу. Это важный этап, который даёт понять, кто едет рядом и будет ли всем участникам комфортно друг с другом. Неделя на яхте — это про команду, дружбу и близость. Нам важно, чтобы каждый чувствовал себя на своём месте.</div>
-      </li>
-      <li class="step">
-        <div class="step-n">04</div>
-        <div class="step-t">Место закрепляется после предоплаты</div>
-      </li>
-    </ul>
-
-    <a class="btn" href="https://t.me/xfufx" target="_blank">Написать в Telegram</a>
-    <br>
-    <span style="display:block; margin-top:20px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-muted);">
-      8 мест · 26 сентября — 3 октября
-    </span>
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><h2>Частые вопросы</h2></div>
+    <div class="faq-list">
+<details class="faq-i"><summary>Будет ли укачивать?</summary><p>Из всех, с кем я ходил в Турции, не укачало никого, даже тех, кто заранее этого боялся. Перед поездкой дам несколько простых рекомендаций, а с собой возьмите пластырь от укачивания и Драмину на всякий случай.</p></details>
+<details class="faq-i"><summary>Нужен ли опыт яхтинга?</summary><p>Нет. Яхту веду я, а всё, что нужно знать на борту, покажу на месте.</p></details>
+<details class="faq-i"><summary>Как добраться до Фетхие?</summary><p>Прилетаете в аэропорт Даламана или Антальи, дальше автобусом или на такси до Фетхие. Из Даламана ближе: дорога занимает около получаса.</p></details>
+<details class="faq-i"><summary>Нужна ли виза?</summary><p>Нет. Гражданам России виза в Турцию не нужна для поездок до 60 дней.</p></details>
+<details class="faq-i"><summary>Как платить на месте?</summary><p>Российские карты в Турции почти не работают. Берите наличные евро, на месте их легко поменять на лиры. Подскажу, сколько взять.</p></details>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Как попасть</h2>
+      <p>Мест всего 7. Напиши, и я расскажу всё, что не поместилось на эту страницу.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Напиши мне в Telegram</h3><p>Расскажу детали и отвечу на первые вопросы.</p><a class="btn btn-light step-btn" href="https://t.me/xfufx" target="_blank" rel="noopener">Написать в Telegram</a></li>
+      <li><h3>Обсудим всё важное</h3><p>Перелёт, размещение, бюджет, ожидания от поездки.</p></li>
+      <li><h3>Звонок-знакомство</h3><p>Перед бронированием проводим небольшую встречу. Это важный этап, который даёт понять, кто едет рядом и будет ли всем участникам комфортно друг с другом.</p></li>
+      <li><h3>Внеси предоплату</h3><p>50% фиксируют место за тобой.</p></li>
+    </ol>
+  </div>
+  <div class="band" role="presentation"></div>
+</section>
+
+<section class="sec why-me" id="organizer">
+  <div class="wrap">
+    <div class="org">
+      <div class="org-ph"><img src="assets/img/mark.jpg" alt="Марк, организатор тура" loading="lazy"></div>
+      <div>
+        <h2>Марк</h2>
+        <p class="org-role">Капитан и организатор, автор блога <a href="https://instagram.com/pov.markiz" target="_blank" rel="noopener">@pov.markiz</a></p>
+        <p>Сертифицированный яхтенный капитан и путешественник. Уже несколько лет вожу небольшие группы в путешествия по Турции, Канарам, Мадейре, Японии, Африке и дальше.</p>
+        <p>По основной профессии я IT продакт-менеджер. Но однажды я заметил удивительную вещь: каким бы загруженным я ни был, путешествия всегда помогали выдохнуть и снова почувствовать вкус жизни. Так они и стали её неотъемлемой частью.</p>
+        <p class="co">Эту поездку ведём вдвоём с <a href="https://instagram.com/osssipskeka" target="_blank" rel="noopener">@osssipskeka</a>.</p>
+      </div>
+    </div>
+    <h3 class="wm-h">Зачем я это делаю</h3>
+    <div class="wm-grid">
+      <div class="wm-i"><h3>Каждая поездка как кино</h3><p>Я снимаю его на дрон, камеру и телефон. А сценарий складывается из мест, которые хочется показать: редких, настоящих, где бывали единицы.</p></div>
+      <div class="wm-i"><h3>Мы — команда</h3><p>Я за лёгкость, открытость и дружбу. После туров мы продолжаем общаться, видимся, снова едем куда-то вместе, помогаем друг другу, открываем новое и вдохновляем.</p></div>
+      <div class="wm-i"><h3>Здесь рады каждому</h3><p>Неважно, едете вы в такую поездку впервые или уже не в первый раз. Вы обязательно найдёте здесь себя.</p></div>
+    </div>
+    <p class="wm-final">Главное — добро, которое мы несём в мир.</p>
+  </div>
+</section>
+
+<section class="sec tours" id="tours">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Другие поездки</h2>
+      <p>Если даты или направление не подошли, вот куда мы едем дальше.</p>
+    </div>
+    <div class="tour-grid" id="toursg">
+<a class="card" href="https://povmarkiz.github.io/cape-town/" style="--c:#E9B3A8">
+  <div class="c-ph"><img class="" src="assets/img/tour-capetown-s.webp" srcset="assets/img/tour-capetown-s.webp 800w, assets/img/tour-capetown.webp 1600w" sizes="(min-width: 900px) 25vw, 50vw" alt="Кейптаун" loading="lazy" decoding="async"></div>
+  <span class="c-date">5–12 февраля 2027</span><span class="c-price">2300 €</span>
+  <div class="c-body"><h3>Кейптаун</h3><p>Океан, горы, пингвины и сафари на краю Африки</p>
+    <div class="c-foot"><span class="c-btn">Подробнее</span></div></div>
+</a>
+<a class="card" href="https://povmarkiz.github.io/" style="--c:#7DA7D9">
+  <div class="c-ph"><img class="" src="assets/img/tour-mauritius-s.webp" srcset="assets/img/tour-mauritius-s.webp 800w, assets/img/tour-mauritius.webp 1600w" sizes="(min-width: 900px) 25vw, 50vw" alt="Маврикий" loading="lazy" decoding="async"></div>
+  <span class="c-date">12–21 августа 2027</span>
+  <div class="c-body"><h3>Маврикий</h3><p>Вилла у океана, киты и гидросамолёт</p>
+    <div class="c-foot"><span class="c-soon">Анонс скоро</span></div></div>
+</a>
+<a class="card" href="https://povmarkiz.github.io/" style="--c:#E58F7A">
+  <div class="c-ph"><img class="" src="assets/img/tour-japan-s.webp" srcset="assets/img/tour-japan-s.webp 800w, assets/img/tour-japan.webp 1600w" sizes="(min-width: 900px) 25vw, 50vw" alt="Япония" loading="lazy" decoding="async"></div>
+  <span class="c-date">10–20 ноября 2027</span>
+  <div class="c-body"><h3>Япония</h3><p>Храмы, рёканы и осенние клёны</p>
+    <div class="c-foot"><span class="c-soon">Анонс скоро</span></div></div>
+</a>
+<a class="card" href="https://povmarkiz.github.io/" style="--c:#E9C46A">
+  <div class="c-ph"><img class="" src="assets/img/tour-seychelles-s.webp" srcset="assets/img/tour-seychelles-s.webp 800w, assets/img/tour-seychelles.webp 1600w" sizes="(min-width: 900px) 25vw, 50vw" alt="Сейшелы на яхте" loading="lazy" decoding="async"></div>
+  <span class="c-date">1–8 января 2028</span>
+  <div class="c-body"><h3>Сейшелы на яхте</h3><p>Новый год среди гранитных островов</p>
+    <div class="c-foot"><span class="c-soon">Анонс скоро</span></div></div>
+</a>
+    </div>
+    <div class="car-ctl tours-ctl">
+      <span class="count" id="toursg-count">1 / 4</span>
+      <div class="car-btns">
+        <button class="circ" data-scroll="toursg" data-dir="-1" aria-label="Предыдущая поездка"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="circ" data-scroll="toursg" data-dir="1" aria-label="Следующая поездка"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
 <footer>
-  <div class="footer-logo">Яхтинг в Турции</div>
-  <p class="footer-meta">
-    <a href="https://www.instagram.com/pov.markiz" target="_blank">@pov.markiz</a> · Авторский тур · Июнь 2026 · Турецкое побережье
-  </p>
+  <div class="wrap">
+    <span>The Crew. Яхтинг в Турции, май 2027</span>
+    <a href="https://instagram.com/pov.markiz" target="_blank" rel="noopener">@pov.markiz</a>
+  </div>
 </footer>
 
+<div class="mcta" id="mcta"><a class="btn" href="#book">Записаться</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <div class="lb-top">
+    <span class="count" id="lb-count">1 / 1</span>
+    <button class="circ" id="lb-close" aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""></div>
+  <button class="circ lb-prev" id="lb-prev" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="circ lb-next" id="lb-next" aria-label="Следующее фото"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
 <script>
-  // Yacht carousel
-  let cur = 0;
-  const track = document.getElementById('carouselTrack');
-  const slides = track ? track.querySelectorAll('.carousel-slide') : [];
-  const dotsWrap = document.getElementById('carouselDots');
-  if (slides.length && dotsWrap) {
-    slides.forEach((_, i) => {
-      const d = document.createElement('div');
-      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      d.onclick = () => goTo(i);
-      dotsWrap.appendChild(d);
+(function(){
+  var LB = {"gallery": [["g1", "Обед всей командой на палубе"], ["g32", "Учимся держать штурвал"], ["g13", "Прыжок в море с кормы"], ["g3", "На носу яхты в открытом море"], ["g12", "Утро на палубе"], ["g10", "Завтрак на борту"], ["g15", "Рассвет на якоре"], ["g6", "Под парусом вдоль берега"], ["g9", "Яхты в марине Фетхие"]], "yacht": [["y1", "Яхта, фото 1"], ["y2", "Яхта, фото 2"], ["y4", "Яхта, фото 3"], ["y5", "Яхта, фото 4"], ["y6", "Яхта, фото 5"], ["y7", "Яхта, фото 6"], ["y8", "Яхта, фото 7"], ["y9", "Яхта, фото 8"], ["y11", "Яхта, фото 9"]]};
+  // навигация
+  var nav = document.getElementById('nav'), mcta = document.getElementById('mcta'), book = document.getElementById('book');
+  function onScroll(){
+    var y = window.scrollY, h = window.innerHeight;
+    nav.classList.toggle('solid', y > h * 0.7);
+    var bookTop = book.getBoundingClientRect().top;
+    mcta.classList.toggle('on', y > h * 0.9 && bookTop > h);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // карусели: стрелки
+  function step(el){ var c = el.firstElementChild; if(!c) return el.clientWidth; var gap = parseFloat(getComputedStyle(el).columnGap || getComputedStyle(el).gap) || 0; return c.getBoundingClientRect().width + gap; }
+  document.querySelectorAll('[data-scroll]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var el = document.getElementById(b.dataset.scroll);
+      el.scrollBy({left: step(el) * +b.dataset.dir, behavior:'smooth'});
     });
-  }
-  function goTo(n) {
-    cur = (n + slides.length) % slides.length;
-    track.style.transform = `translateX(-${cur * 100}%)`;
-    document.querySelectorAll('.carousel-dot').forEach((d, i) =>
-      d.classList.toggle('active', i === cur));
-  }
-  function carouselMove(dir) { goTo(cur + dir); }
-
-  // Lightbox
-  const collageImgs = Array.from(document.querySelectorAll('.collage-item img')).map(i => i.src);
-  let lbCur = 0;
-  const lb = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lbImg');
-  const lbCounter = document.getElementById('lbCounter');
-
-  function openLightbox(n) {
-    lbCur = n;
-    lbImg.src = collageImgs[lbCur];
-    lbCounter.textContent = `${lbCur + 1} / ${collageImgs.length}`;
-    lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox(e) {
-    if (!e || e.target === lb || e.target.classList.contains('lb-close')) {
-      lb.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  }
-  function lbMove(dir) {
-    lbCur = (lbCur + dir + collageImgs.length) % collageImgs.length;
-    lbImg.src = collageImgs[lbCur];
-    lbCounter.textContent = `${lbCur + 1} / ${collageImgs.length}`;
-  }
-  document.addEventListener('keydown', e => {
-    if (!lb.classList.contains('open')) return;
-    if (e.key === 'ArrowLeft') lbMove(-1);
-    if (e.key === 'ArrowRight') lbMove(1);
-    if (e.key === 'Escape') closeLightbox({target: lb});
   });
-  function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    const burger = document.getElementById('burger');
-    menu.classList.toggle('open');
-    burger.classList.toggle('open');
-    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
-  }
+  function idx(el){ return Math.round(el.scrollLeft / step(el)); }
+  // счётчик галереи (мобайл)
+  var gal = document.getElementById('gal'), galCount = document.getElementById('gal-count');
+  gal.addEventListener('scroll', function(){ galCount.textContent = Math.min(idx(gal) + 1, gal.children.length) + ' / ' + gal.children.length; }, {passive:true});
+  ['whyg','yg','toursg'].forEach(function(id){ var el = document.getElementById(id), c = document.getElementById(id + '-count'); if (!el || !c) return;
+    el.addEventListener('scroll', function(){ var k = idx(el); if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 4) k = el.children.length - 1; c.textContent = Math.min(k + 1, el.children.length) + ' / ' + el.children.length; }, {passive:true}); });
+  // точки маршрута
+  var days = document.getElementById('days'), dots = document.getElementById('days-dots');
+  for (var i = 0; i < days.children.length; i++) dots.appendChild(document.createElement('i'));
+  function setDots(){ var k = Math.min(idx(days), days.children.length - 1); if (days.scrollLeft + days.clientWidth >= days.scrollWidth - 4) k = days.children.length - 1; [].forEach.call(dots.children, function(d, j){ d.classList.toggle('on', j === k); }); }
+  days.addEventListener('scroll', setDots, {passive:true}); setDots();
+
+  // "+N" на превью яхты
+  document.querySelectorAll('.vg').forEach(function(g){
+    var n = g.children.length; if (n > 5) g.children[4].setAttribute('data-more', '+' + (n - 4));
+  });
+
+  // лайтбокс
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'), lbCount = document.getElementById('lb-count');
+  var set = null, cur = 0, last = null;
+  function show(){ var it = LB[set][cur]; lbImg.src = 'assets/img/' + it[0] + '.webp'; lbImg.alt = it[1]; lbCount.textContent = (cur + 1) + ' / ' + LB[set].length; }
+  function open(s, i, from){ set = s; cur = i; last = from; show(); lb.classList.add('open'); document.body.style.overflow = 'hidden'; document.getElementById('lb-close').focus(); }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow = ''; if (last) last.focus(); }
+  function go(d){ var n = LB[set].length; cur = (cur + d + n) % n; show(); }
+  document.querySelectorAll('[data-lb]').forEach(function(b){ b.addEventListener('click', function(){ open(b.dataset.lb, +b.dataset.i, b); }); });
+  document.getElementById('lb-close').onclick = close;
+  document.getElementById('lb-prev').onclick = function(){ go(-1); };
+  document.getElementById('lb-next').onclick = function(){ go(1); };
+  lb.addEventListener('click', function(e){ if (e.target === lb || e.target.id === 'lb-stage') close(); });
+  document.addEventListener('keydown', function(e){ if (!lb.classList.contains('open')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') go(-1); if (e.key === 'ArrowRight') go(1); });
+  var sx = null; var st = document.getElementById('lb-stage');
+  st.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, {passive:true});
+  st.addEventListener('touchend', function(e){ if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1); sx = null; });
+})();
 </script>
 </body>
 </html>
